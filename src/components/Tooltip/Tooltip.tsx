@@ -4,7 +4,7 @@ import styles from './Tooltip.module.css';
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 export type TooltipType    = 'basic' | 'onboarding';
-export type TooltipVariant = 'default' | 'outlined';
+export type TooltipVariant = 'default' | 'brand' | 'outlined';
 
 /**
  * Position names follow the pattern: <side of anchor>-<alignment on that side>.
@@ -76,6 +76,7 @@ export const Tooltip: React.FC<TooltipProps> = ({
   const wrapperCls = [
     styles.tooltip,
     styles[type],
+    type === 'onboarding' && variant === 'brand'    ? styles.brand    : '',
     type === 'onboarding' && variant === 'outlined' ? styles.outlined : '',
     styles[`arrow${arrowDir}`],
     arrowAlign === 'HLeft'   ? styles.arrowHLeft   : '',

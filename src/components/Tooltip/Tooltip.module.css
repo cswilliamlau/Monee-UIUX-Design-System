@@ -41,13 +41,19 @@
   border-color: var(--mnd-color-border-shopee-solid);
 }
 
+/* default variant: black title */
 .onboarding .title {
   font-family: var(--mnd-font-family-plain);
   font-size: var(--mnd-font-size-m);       /* 14px */
   font-weight: var(--mnd-font-weight-semibold);
   line-height: var(--mnd-line-height-m);   /* 18px */
-  color: var(--mnd-color-text-shopee);
+  color: var(--mnd-color-text-primary);
   margin-bottom: 4px;
+}
+/* brand / outlined variants: orange title */
+.onboarding.brand .title,
+.onboarding.outlined .title {
+  color: var(--mnd-color-text-shopee);
 }
 
 .onboarding .content {
@@ -69,7 +75,7 @@
 .step {
   font-family: var(--mnd-font-family-plain);
   font-size: var(--mnd-font-size-xs);      /* 11px */
-  color: var(--mnd-color-text-tertiary);
+  color: var(--mnd-color-text-shopee);
 }
 
 .footerBtns {

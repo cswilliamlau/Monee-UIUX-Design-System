@@ -49,7 +49,7 @@ import { Tooltip } from '@monee/design-system';
   },
   argTypes: {
     type:     { control: 'radio',  options: ['basic', 'onboarding'] },
-    variant:  { control: 'radio',  options: ['default', 'outlined'] },
+    variant:  { control: 'radio',  options: ['default', 'brand', 'outlined'] },
     position: { control: 'select', options: [
       'bottom-center', 'bottom-left', 'bottom-right',
       'top-center', 'top-left', 'top-right',
@@ -147,10 +147,9 @@ export const BasicTooltip: Story = {
 // ─── Onboarding — Default ─────────────────────────────────────────────────────
 
 export const OnboardingDefault: Story = {
-  name: 'Onboarding — Default (white card)',
+  name: 'Onboarding — Default (white bg, black title)',
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 32, padding: 20 }}>
-
       <div>
         <Label>Pointing Up — bottom positions</Label>
         <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap', alignItems: 'flex-start' }}>
@@ -162,7 +161,6 @@ export const OnboardingDefault: Story = {
           ))}
         </div>
       </div>
-
       <div>
         <Label>Pointing Down — top positions</Label>
         <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
@@ -174,7 +172,6 @@ export const OnboardingDefault: Story = {
           ))}
         </div>
       </div>
-
       <div>
         <Label>Side positions</Label>
         <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
@@ -186,7 +183,20 @@ export const OnboardingDefault: Story = {
           ))}
         </div>
       </div>
+    </div>
+  ),
+};
 
+export const OnboardingBrand: Story = {
+  name: 'Onboarding — Brand (white bg, orange title)',
+  render: () => (
+    <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap', padding: 20 }}>
+      {(['bottom-center', 'top-center', 'left-center', 'right-center'] as const).map((p) => (
+        <div key={p} style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+          <span style={{ fontSize: 9, color: '#a3a3a3', textAlign: 'center' }}>{p}</span>
+          <Tooltip type="onboarding" variant="brand" position={p} title="Title content" content="Please input content here." step="1/3" onSkip={() => {}} onNext={() => {}} />
+        </div>
+      ))}
     </div>
   ),
 };
