@@ -1,0 +1,457 @@
+/* ============================================================
+   MONEE DESIGN SYSTEM — DESIGN TOKENS
+   Generated from monee-design-tokens.json
+   Theme: mobile-light
+   ============================================================ */
+
+:root {
+
+  /* ----------------------------------------------------------
+     REFERENCE: FONT FAMILY
+  ---------------------------------------------------------- */
+  --mnd-font-family-plain: 'Roboto', sans-serif;
+  --mnd-font-family-brand: 'Shopee 2021', sans-serif;
+
+  /* ----------------------------------------------------------
+     REFERENCE: FONT WEIGHT
+  ---------------------------------------------------------- */
+  --mnd-font-weight-regular:  400;
+  --mnd-font-weight-medium:   500;
+  --mnd-font-weight-semibold: 600;
+  --mnd-font-weight-bold:     700;
+
+  /* ----------------------------------------------------------
+     REFERENCE: FONT SIZE
+  ---------------------------------------------------------- */
+  --mnd-font-size-xs:  11px;
+  --mnd-font-size-s:   12px;
+  --mnd-font-size-m:   14px;
+  --mnd-font-size-l:   16px;
+  --mnd-font-size-xl:  18px;
+  --mnd-font-size-2xl: 20px;
+  --mnd-font-size-3xl: 24px;
+  --mnd-font-size-4xl: 28px;
+  --mnd-font-size-5xl: 32px;
+  --mnd-font-size-6xl: 36px;
+
+  /* ----------------------------------------------------------
+     REFERENCE: LINE HEIGHT
+  ---------------------------------------------------------- */
+  --mnd-line-height-xs:  14px;
+  --mnd-line-height-s:   16px;
+  --mnd-line-height-m:   18px;
+  --mnd-line-height-l:   20px;
+  --mnd-line-height-xl:  24px;
+  --mnd-line-height-2xl: 26px;
+  --mnd-line-height-3xl: 30px;
+  --mnd-line-height-4xl: 34px;
+  --mnd-line-height-5xl: 38px;
+  --mnd-line-height-6xl: 44px;
+
+  /* ----------------------------------------------------------
+     REFERENCE: DIMENSION SCALE
+  ---------------------------------------------------------- */
+  --mnd-dim-none: 0px;
+  --mnd-dim-0_5:  2px;
+  --mnd-dim-1:    4px;
+  --mnd-dim-1_5:  6px;
+  --mnd-dim-2:    8px;
+  --mnd-dim-2_5:  10px;
+  --mnd-dim-3:    12px;
+  --mnd-dim-4:    16px;
+  --mnd-dim-5:    20px;
+  --mnd-dim-6:    24px;
+  --mnd-dim-7:    28px;
+  --mnd-dim-8:    32px;
+  --mnd-dim-9:    36px;
+  --mnd-dim-10:   40px;
+  --mnd-dim-11:   44px;
+  --mnd-dim-12:   48px;
+  --mnd-dim-13:   52px;
+  --mnd-dim-14:   56px;
+  --mnd-dim-15:   60px;
+  --mnd-dim-16:   64px;
+  --mnd-dim-17:   68px;
+  --mnd-dim-18:   72px;
+  --mnd-dim-19:   76px;
+  --mnd-dim-20:   80px;
+  --mnd-dim-26:   104px;
+
+  /* ----------------------------------------------------------
+     REFERENCE: PALETTE — Base
+  ---------------------------------------------------------- */
+  --mnd-palette-white:       #ffffff;
+  --mnd-palette-black:       #000000;
+  --mnd-palette-transparent: rgba(0, 0, 0, 0);
+
+  /* ----------------------------------------------------------
+     REFERENCE: PALETTE — Neutral
+  ---------------------------------------------------------- */
+  --mnd-palette-neutral-25:  #f8f8f8;
+  --mnd-palette-neutral-50:  #f2f2f2;
+  --mnd-palette-neutral-100: #e4e4e4;
+  --mnd-palette-neutral-200: #d7d7d7;
+  --mnd-palette-neutral-300: #bebebe;
+  --mnd-palette-neutral-400: #a3a3a3;
+  --mnd-palette-neutral-500: #8c8c8c;
+  --mnd-palette-neutral-600: #747474;
+  --mnd-palette-neutral-700: #5b5b5b;
+  --mnd-palette-neutral-800: #454545;
+  --mnd-palette-neutral-900: #333333;
+  --mnd-palette-neutral-950: #222222;
+
+  /* ----------------------------------------------------------
+     REFERENCE: PALETTE — Error
+  ---------------------------------------------------------- */
+  --mnd-palette-error-25:  #fff6f7;
+  --mnd-palette-error-50:  #ffedef;
+  --mnd-palette-error-100: #ffdce0;
+  --mnd-palette-error-200: #ffc8cd;
+  --mnd-palette-error-300: #ffa2aa;
+  --mnd-palette-error-400: #fd6c78;
+  --mnd-palette-error-500: #f64356;
+  --mnd-palette-error-600: #ea1c42;
+  --mnd-palette-error-700: #bf1234;
+  --mnd-palette-error-800: #9e142b;
+  --mnd-palette-error-900: #78011b;
+  --mnd-palette-error-950: #5c0112;
+
+  /* ----------------------------------------------------------
+     REFERENCE: PALETTE — Warning
+  ---------------------------------------------------------- */
+  --mnd-palette-warning-25:  #fcf9e6;
+  --mnd-palette-warning-50:  #f8f1bf;
+  --mnd-palette-warning-100: #f1e39d;
+  --mnd-palette-warning-200: #f4d880;
+  --mnd-palette-warning-300: #f4c251;
+  --mnd-palette-warning-400: #f4b11f;
+  --mnd-palette-warning-500: #f1a500;
+  --mnd-palette-warning-600: #ea9400;
+  --mnd-palette-warning-700: #c16f00;
+  --mnd-palette-warning-800: #9d5200;
+  --mnd-palette-warning-900: #763b00;
+  --mnd-palette-warning-950: #5c2a00;
+
+  /* ----------------------------------------------------------
+     REFERENCE: PALETTE — Success
+  ---------------------------------------------------------- */
+  --mnd-palette-success-25:  #edfef1;
+  --mnd-palette-success-50:  #cbfdd9;
+  --mnd-palette-success-100: #a8f8bf;
+  --mnd-palette-success-200: #86f4aa;
+  --mnd-palette-success-300: #4ce58f;
+  --mnd-palette-success-400: #21d37f;
+  --mnd-palette-success-500: #1fbd6a;
+  --mnd-palette-success-600: #1ea95e;
+  --mnd-palette-success-700: #008942;
+  --mnd-palette-success-800: #007839;
+  --mnd-palette-success-900: #005a29;
+  --mnd-palette-success-950: #003f1a;
+
+  /* ----------------------------------------------------------
+     REFERENCE: PALETTE — Shopee
+  ---------------------------------------------------------- */
+  --mnd-palette-shopee-25:  #fff6f4;
+  --mnd-palette-shopee-50:  #ffe8e3;
+  --mnd-palette-shopee-100: #ffd9d0;
+  --mnd-palette-shopee-200: #ffc7ba;
+  --mnd-palette-shopee-300: #f9a896;
+  --mnd-palette-shopee-400: #fb846b;
+  --mnd-palette-shopee-500: #f9674a;
+  --mnd-palette-shopee-600: #ee4d2d;
+  --mnd-palette-shopee-700: #ca3a1d;
+  --mnd-palette-shopee-800: #a12b13;
+  --mnd-palette-shopee-900: #741b09;
+  --mnd-palette-shopee-950: #58190d;
+
+  /* ----------------------------------------------------------
+     REFERENCE: PALETTE — MariBank
+  ---------------------------------------------------------- */
+  --mnd-palette-maribank-25:  #fff5ec;
+  --mnd-palette-maribank-50:  #ffead8;
+  --mnd-palette-maribank-100: #ffdbbd;
+  --mnd-palette-maribank-200: #ffcaa5;
+  --mnd-palette-maribank-300: #f9ab7d;
+  --mnd-palette-maribank-400: #fb8e56;
+  --mnd-palette-maribank-500: #fd7135;
+  --mnd-palette-maribank-600: #fa5e00;
+  --mnd-palette-maribank-700: #cc3802;
+  --mnd-palette-maribank-800: #a12c0b;
+  --mnd-palette-maribank-900: #741c03;
+  --mnd-palette-maribank-950: #5c1402;
+
+  /* ----------------------------------------------------------
+     REFERENCE: PALETTE — Amber
+  ---------------------------------------------------------- */
+  --mnd-palette-amber-25:  #fff8e6;
+  --mnd-palette-amber-50:  #ffeebe;
+  --mnd-palette-amber-100: #fadf9c;
+  --mnd-palette-amber-200: #ffd381;
+  --mnd-palette-amber-300: #ffbc56;
+  --mnd-palette-amber-400: #ffaa30;
+  --mnd-palette-amber-500: #ff9c00;
+  --mnd-palette-amber-600: #f88a05;
+  --mnd-palette-amber-700: #cd6501;
+  --mnd-palette-amber-800: #a84800;
+  --mnd-palette-amber-900: #7f3300;
+  --mnd-palette-amber-950: #632301;
+
+  /* ----------------------------------------------------------
+     REFERENCE: PALETTE — Green Light
+  ---------------------------------------------------------- */
+  --mnd-palette-green-light-25:  #f3fdec;
+  --mnd-palette-green-light-50:  #ddf9c9;
+  --mnd-palette-green-light-100: #c3f39d;
+  --mnd-palette-green-light-200: #b0ee7a;
+  --mnd-palette-green-light-300: #96dc50;
+  --mnd-palette-green-light-400: #80c92a;
+  --mnd-palette-green-light-500: #71b41b;
+  --mnd-palette-green-light-600: #64a311;
+  --mnd-palette-green-light-700: #51850f;
+  --mnd-palette-green-light-800: #45720b;
+  --mnd-palette-green-light-900: #335606;
+  --mnd-palette-green-light-950: #223c02;
+
+  /* ----------------------------------------------------------
+     REFERENCE: PALETTE — Teal
+  ---------------------------------------------------------- */
+  --mnd-palette-teal-25:  #e6fff8;
+  --mnd-palette-teal-50:  #c4fdef;
+  --mnd-palette-teal-100: #93f8e2;
+  --mnd-palette-teal-200: #72f1d8;
+  --mnd-palette-teal-300: #4bdfc5;
+  --mnd-palette-teal-400: #2fccb2;
+  --mnd-palette-teal-500: #29b79f;
+  --mnd-palette-teal-600: #04a48e;
+  --mnd-palette-teal-700: #03856f;
+  --mnd-palette-teal-800: #00755e;
+  --mnd-palette-teal-900: #025541;
+  --mnd-palette-teal-950: #01412f;
+
+  /* ----------------------------------------------------------
+     REFERENCE: PALETTE — Blue
+  ---------------------------------------------------------- */
+  --mnd-palette-blue-25:  #f3f9fe;
+  --mnd-palette-blue-50:  #e0f1ff;
+  --mnd-palette-blue-100: #c7e6fe;
+  --mnd-palette-blue-200: #b0dcff;
+  --mnd-palette-blue-300: #7bc6fe;
+  --mnd-palette-blue-400: #3fb1fe;
+  --mnd-palette-blue-500: #0399ef;
+  --mnd-palette-blue-600: #0084d0;
+  --mnd-palette-blue-700: #016aae;
+  --mnd-palette-blue-800: #025591;
+  --mnd-palette-blue-900: #014478;
+  --mnd-palette-blue-950: #003262;
+
+  /* ----------------------------------------------------------
+     REFERENCE: PALETTE — Blue Dark
+  ---------------------------------------------------------- */
+  --mnd-palette-blue-dark-25:  #f5f9ff;
+  --mnd-palette-blue-dark-50:  #ebf2ff;
+  --mnd-palette-blue-dark-100: #d9e7ff;
+  --mnd-palette-blue-dark-200: #c3d9ff;
+  --mnd-palette-blue-dark-300: #9cbfff;
+  --mnd-palette-blue-dark-400: #699dff;
+  --mnd-palette-blue-dark-500: #397bfc;
+  --mnd-palette-blue-dark-600: #1c64f0;
+  --mnd-palette-blue-dark-700: #0755ce;
+  --mnd-palette-blue-dark-800: #1046ae;
+  --mnd-palette-blue-dark-900: #0c3688;
+  --mnd-palette-blue-dark-950: #072869;
+
+  /* ----------------------------------------------------------
+     REFERENCE: PALETTE — Black Opacity
+  ---------------------------------------------------------- */
+  --mnd-palette-black-opacity-25:  rgba(0, 0, 0, 0.03);
+  --mnd-palette-black-opacity-50:  rgba(0, 0, 0, 0.05);
+  --mnd-palette-black-opacity-100: rgba(0, 0, 0, 0.10);
+  --mnd-palette-black-opacity-200: rgba(0, 0, 0, 0.16);
+  --mnd-palette-black-opacity-300: rgba(0, 0, 0, 0.25);
+  --mnd-palette-black-opacity-400: rgba(0, 0, 0, 0.36);
+  --mnd-palette-black-opacity-500: rgba(0, 0, 0, 0.45);
+  --mnd-palette-black-opacity-600: rgba(0, 0, 0, 0.54);
+  --mnd-palette-black-opacity-700: rgba(0, 0, 0, 0.64);
+  --mnd-palette-black-opacity-800: rgba(0, 0, 0, 0.73);
+  --mnd-palette-black-opacity-900: rgba(0, 0, 0, 0.80);
+  --mnd-palette-black-opacity-950: rgba(0, 0, 0, 0.87);
+
+  /* ----------------------------------------------------------
+     REFERENCE: PALETTE — White Opacity
+  ---------------------------------------------------------- */
+  --mnd-palette-white-opacity-25:  rgba(255, 255, 255, 0.13);
+  --mnd-palette-white-opacity-50:  rgba(255, 255, 255, 0.20);
+  --mnd-palette-white-opacity-100: rgba(255, 255, 255, 0.27);
+  --mnd-palette-white-opacity-200: rgba(255, 255, 255, 0.36);
+  --mnd-palette-white-opacity-300: rgba(255, 255, 255, 0.46);
+  --mnd-palette-white-opacity-400: rgba(255, 255, 255, 0.55);
+  --mnd-palette-white-opacity-500: rgba(255, 255, 255, 0.64);
+  --mnd-palette-white-opacity-600: rgba(255, 255, 255, 0.75);
+  --mnd-palette-white-opacity-700: rgba(255, 255, 255, 0.84);
+  --mnd-palette-white-opacity-800: rgba(255, 255, 255, 0.90);
+  --mnd-palette-white-opacity-900: rgba(255, 255, 255, 0.95);
+  --mnd-palette-white-opacity-950: rgba(255, 255, 255, 0.97);
+
+  /* ============================================================
+     SYSTEM TOKENS — Mobile Light Theme
+     ============================================================ */
+
+  /* ----------------------------------------------------------
+     SYSTEM: FOREGROUND (Icon) COLORS
+  ---------------------------------------------------------- */
+  --mnd-color-fg-primary:              #222222;
+  --mnd-color-fg-primary-on-solid:     #ffffff;
+  --mnd-color-fg-secondary:            #5b5b5b;
+  --mnd-color-fg-secondary-on-solid:   rgba(255, 255, 255, 0.84);
+  --mnd-color-fg-tertiary:             #8c8c8c;
+  --mnd-color-fg-tertiary-on-solid:    rgba(255, 255, 255, 0.64);
+  --mnd-color-fg-disable:              #bebebe;
+  --mnd-color-fg-placeholder:          #8c8c8c;
+  --mnd-color-fg-link:                 #1c64f0;
+  --mnd-color-fg-shopee:               #ee4d2d;
+  --mnd-color-fg-maribank:             #fa5e00;
+  --mnd-color-fg-success:              #1fbd6a;
+  --mnd-color-fg-warning:              #f1a500;
+  --mnd-color-fg-error:                #f64356;
+  --mnd-color-fg-income:               #2673dd;
+  --mnd-color-fg-saveplus:             #ea5f00;
+  --mnd-color-fg-category-amber:       #ff9c00;
+  --mnd-color-fg-category-teal:        #29b79f;
+  --mnd-color-fg-category-blue-dark:   #397bfc;
+
+  /* ----------------------------------------------------------
+     SYSTEM: TEXT COLORS
+  ---------------------------------------------------------- */
+  --mnd-color-text-primary:            #222222;
+  --mnd-color-text-primary-on-solid:   #ffffff;
+  --mnd-color-text-secondary:          #5b5b5b;
+  --mnd-color-text-secondary-on-solid: rgba(255, 255, 255, 0.84);
+  --mnd-color-text-tertiary:           #8c8c8c;
+  --mnd-color-text-tertiary-on-solid:  rgba(255, 255, 255, 0.64);
+  --mnd-color-text-disable:            #bebebe;
+  --mnd-color-text-placeholder:        #8c8c8c;
+  --mnd-color-text-link:               #1c64f0;
+  --mnd-color-text-shopee:             #ee4d2d;
+  --mnd-color-text-maribank:           #fa5e00;
+  --mnd-color-text-success:            #1ea95e;
+  --mnd-color-text-warning:            #ea9400;
+  --mnd-color-text-error:              #ea1c42;
+  --mnd-color-text-income:             #2673dd;
+  --mnd-color-text-saveplus:           #ea5f00;
+
+  /* ----------------------------------------------------------
+     SYSTEM: BACKGROUND COLORS
+  ---------------------------------------------------------- */
+  --mnd-color-bg-primary:              #ffffff;
+  --mnd-color-bg-primary-overlay:      rgba(0, 0, 0, 0.64);
+  --mnd-color-bg-secondary:            #f8f8f8;
+  --mnd-color-bg-secondary-overlay:    rgba(0, 0, 0, 0.45);
+  --mnd-color-bg-tertiary:             #f2f2f2;
+  --mnd-color-bg-tertiary-overlay:     rgba(0, 0, 0, 0.25);
+  --mnd-color-bg-disable:              #e4e4e4;
+  --mnd-color-bg-shopee:               #fff6f4;
+  --mnd-color-bg-shopee-solid:         #ee4d2d;
+  --mnd-color-bg-shopee-overlay:       #ca3a1d;
+  --mnd-color-bg-maribank:             #fff5ec;
+  --mnd-color-bg-maribank-solid:       #fa5e00;
+  --mnd-color-bg-maribank-overlay:     #cc3802;
+  --mnd-color-bg-success:              #edfef1;
+  --mnd-color-bg-success-solid:        #1fbd6a;
+  --mnd-color-bg-warning:              #fcf9e6;
+  --mnd-color-bg-warning-solid:        #f1a500;
+  --mnd-color-bg-error:                #fff6f7;
+  --mnd-color-bg-error-solid:          #f64356;
+  --mnd-color-bg-category-amber:       #fff8e6;
+  --mnd-color-bg-category-teal:        #e6fff8;
+  --mnd-color-bg-category-blue-dark:   #f5f9ff;
+
+  /* ----------------------------------------------------------
+     SYSTEM: BORDER COLORS
+  ---------------------------------------------------------- */
+  --mnd-color-border-primary:            rgba(0, 0, 0, 0.87);
+  --mnd-color-border-primary-on-solid:   rgba(255, 255, 255, 0.97);
+  --mnd-color-border-secondary:          rgba(0, 0, 0, 0.64);
+  --mnd-color-border-secondary-on-solid: rgba(255, 255, 255, 0.84);
+  --mnd-color-border-tertiary:           rgba(0, 0, 0, 0.45);
+  --mnd-color-border-tertiary-on-solid:  rgba(255, 255, 255, 0.64);
+  --mnd-color-border-disable:            rgba(0, 0, 0, 0.10);
+  --mnd-color-border-split:              rgba(0, 0, 0, 0.10);
+  --mnd-color-border-shopee:             #f9a896;
+  --mnd-color-border-shopee-solid:       #ee4d2d;
+  --mnd-color-border-maribank:           #f9ab7d;
+  --mnd-color-border-maribank-solid:     #fa5e00;
+  --mnd-color-border-success:            #4ce58f;
+  --mnd-color-border-warning:            #f4c251;
+  --mnd-color-border-error:              #ffa2aa;
+
+  /* ----------------------------------------------------------
+     SYSTEM: SPACING — Gap
+  ---------------------------------------------------------- */
+  --mnd-gap-none: 0px;
+  --mnd-gap-s:    2px;
+  --mnd-gap-m:    4px;
+  --mnd-gap-l:    6px;
+  --mnd-gap-xl:   8px;
+  --mnd-gap-2xl:  12px;
+  --mnd-gap-3xl:  16px;
+  --mnd-gap-4xl:  20px;
+  --mnd-gap-5xl:  24px;
+
+  /* ----------------------------------------------------------
+     SYSTEM: SPACING — Padding
+  ---------------------------------------------------------- */
+  --mnd-padding-none: 0px;
+  --mnd-padding-s:    2px;
+  --mnd-padding-m:    4px;
+  --mnd-padding-l:    6px;
+  --mnd-padding-xl:   8px;
+  --mnd-padding-2xl:  12px;
+  --mnd-padding-3xl:  16px;
+  --mnd-padding-4xl:  20px;
+  --mnd-padding-5xl:  24px;
+
+  /* ----------------------------------------------------------
+     SYSTEM: BORDER RADIUS
+  ---------------------------------------------------------- */
+  --mnd-radius-none: 0px;
+  --mnd-radius-s:    4px;
+  --mnd-radius-m:    6px;
+  --mnd-radius-l:    10px;
+  --mnd-radius-xl:   12px;
+  --mnd-radius-full: 999px;
+
+  /* ----------------------------------------------------------
+     SYSTEM: CONTROL HEIGHT
+  ---------------------------------------------------------- */
+  --mnd-control-height-xs:  16px;
+  --mnd-control-height-s:   28px;
+  --mnd-control-height-m:   44px;
+  --mnd-control-height-l:   48px;
+  --mnd-control-height-xl:  56px;
+  --mnd-control-height-2xl: 64px;
+  --mnd-control-height-3xl: 72px;
+
+  /* ----------------------------------------------------------
+     COMPONENT: BUTTON — Control Height
+  ---------------------------------------------------------- */
+  --mnd-button-height-s:  28px;
+  --mnd-button-height-m:  36px;
+  --mnd-button-height-l:  44px;
+  --mnd-button-height-xl: 52px;
+
+  /* ----------------------------------------------------------
+     COMPONENT: INPUT — Control Height
+  ---------------------------------------------------------- */
+  --mnd-input-height-default-s:   44px;
+  --mnd-input-height-default-m:   48px;
+  --mnd-input-height-with-label-s: 56px;
+  --mnd-input-height-with-label-m: 64px;
+  --mnd-input-height-amount:       72px;
+  --mnd-input-height-textarea:     104px;
+
+  /* ----------------------------------------------------------
+     COMPONENT: LIST — Control Height
+  ---------------------------------------------------------- */
+  --mnd-list-height-default: 44px;
+
+}

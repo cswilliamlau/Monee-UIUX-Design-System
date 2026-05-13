@@ -1,0 +1,159 @@
+/* ============================================================
+   MONEE DESIGN SYSTEM — Dialog Component
+   ============================================================ */
+
+/* ---- Card ---- */
+.dialog {
+  background: var(--mnd-color-bg-primary);
+  border-radius: var(--mnd-radius-xl);
+  width: 295px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.16);
+  position: relative;
+}
+
+/* ---- Image ---- */
+.image {
+  width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--mnd-color-bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image--1x1 { aspect-ratio: 1 / 1; }
+.image--2x3  { aspect-ratio: 2 / 3; }
+.image--3x4  { aspect-ratio: 3 / 4; }
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---- Body ---- */
+.body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--mnd-gap-xl);
+}
+
+/* ---- Icon ---- */
+.icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--mnd-gap-m);
+}
+.icon > * {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+/* ---- Title ---- */
+.title {
+  font-family: var(--mnd-font-family-plain);
+  font-size: var(--mnd-font-size-l);
+  font-weight: var(--mnd-font-weight-semibold);
+  line-height: var(--mnd-line-height-l);
+  color: var(--mnd-color-text-primary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---- Content ---- */
+.content {
+  font-family: var(--mnd-font-family-plain);
+  font-size: var(--mnd-font-size-m);
+  line-height: var(--mnd-line-height-m);
+  color: var(--mnd-color-text-secondary);
+}
+
+/* ---- Actions ---- */
+.actions {
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--mnd-gap-xl);
+}
+
+/* ---- Button group in actions ---- */
+.btnGroup {
+  display: flex;
+  gap: var(--mnd-gap-2xl);
+}
+.btnGroup--vertical  { flex-direction: column; }
+.btnGroup--horizontal .btnGroupBtn { flex: 1; }
+
+/* ---- Action buttons ---- */
+.btnGroupBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--mnd-button-height-l);
+  padding: 0 var(--mnd-padding-4xl);
+  font-family: var(--mnd-font-family-plain);
+  font-size: var(--mnd-font-size-m);
+  font-weight: var(--mnd-font-weight-semibold);
+  border-radius: var(--mnd-radius-l);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  user-select: none;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* shopee primary (filled) */
+.btnPrimary--shopee {
+  background: var(--mnd-color-bg-shopee-solid);
+  color: #fff;
+}
+.btnPrimary--shopee:hover, .btnPrimary--shopee:active {
+  background: var(--mnd-color-bg-shopee-overlay);
+}
+
+/* shopee secondary (outline) */
+.btnSecondary--shopee {
+  background: transparent;
+  color: var(--mnd-color-text-shopee);
+  border-color: var(--mnd-color-fg-shopee);
+}
+.btnSecondary--shopee:hover, .btnSecondary--shopee:active {
+  background: var(--mnd-color-bg-shopee);
+}
+
+/* bank primary (filled) */
+.btnPrimary--bank {
+  background: var(--mnd-color-bg-maribank-solid);
+  color: #fff;
+}
+.btnPrimary--bank:hover, .btnPrimary--bank:active {
+  background: var(--mnd-color-bg-maribank-overlay);
+}
+
+/* bank secondary (outline) */
+.btnSecondary--bank {
+  background: transparent;
+  color: var(--mnd-color-text-maribank);
+  border-color: var(--mnd-color-fg-maribank);
+}
+.btnSecondary--bank:hover, .btnSecondary--bank:active {
+  background: var(--mnd-color-bg-maribank);
+}
+
+/* ---- Overlay / Mask ---- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.64);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}

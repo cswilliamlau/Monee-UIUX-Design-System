@@ -1,0 +1,158 @@
+/* ============================================================
+   MONEE DESIGN SYSTEM — Button Component
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--mnd-gap-xl);
+  white-space: nowrap;
+  cursor: pointer;
+  font-family: var(--mnd-font-family-plain);
+  font-weight: var(--mnd-font-weight-semibold);
+  border: 1px solid transparent;
+  border-radius: var(--mnd-radius-m);
+  transition: background 0.15s, color 0.15s, border-color 0.15s, opacity 0.15s;
+  text-decoration: none;
+  line-height: 1;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ---- SIZES ---- */
+.size-s  { height: var(--mnd-button-height-s);  padding: 0 var(--mnd-padding-3xl); font-size: var(--mnd-font-size-s); border-radius: var(--mnd-radius-m); }
+.size-m  { height: var(--mnd-button-height-m);  padding: 0 var(--mnd-padding-3xl); font-size: var(--mnd-font-size-m); border-radius: var(--mnd-radius-m); }
+.size-l  { height: var(--mnd-button-height-l);  padding: 0 var(--mnd-padding-4xl); font-size: var(--mnd-font-size-m); border-radius: var(--mnd-radius-l); }
+.size-xl { height: var(--mnd-button-height-xl); padding: 0 var(--mnd-padding-4xl); font-size: var(--mnd-font-size-l); border-radius: var(--mnd-radius-l); }
+
+/* ---- FULL WIDTH ---- */
+.fullWidth { width: 100%; }
+
+/* ---- ROUNDED ---- */
+.rounded {
+  border-radius: var(--mnd-radius-full) !important;
+  height: var(--mnd-button-height-l);
+  font-size: var(--mnd-font-size-m);
+  padding: 0 var(--mnd-padding-5xl);
+}
+
+/* ---- FLOATING ---- */
+.floating { box-shadow: 0 4px 16px rgba(0, 0, 0, 0.20); }
+
+/* ============================================================
+   FILLED VARIANTS
+   ============================================================ */
+.filled-shopee { background: var(--mnd-color-bg-shopee-solid); color: #fff; }
+.filled-shopee:hover, .filled-shopee:active { background: var(--mnd-color-bg-shopee-overlay); }
+.filled-shopee:disabled { background: var(--mnd-color-bg-disable); color: var(--mnd-color-text-disable); }
+
+.filled-bank { background: var(--mnd-color-bg-maribank-solid); color: #fff; }
+.filled-bank:hover, .filled-bank:active { background: var(--mnd-color-bg-maribank-overlay); }
+.filled-bank:disabled { background: var(--mnd-color-bg-disable); color: var(--mnd-color-text-disable); }
+
+.filled-white-shopee { background: var(--mnd-color-bg-primary); color: var(--mnd-color-text-shopee); }
+.filled-white-shopee:hover, .filled-white-shopee:active { background: rgba(255,255,255,0.88); }
+.filled-white-shopee:disabled { background: rgba(255,255,255,0.4); color: rgba(255,255,255,0.5); }
+
+.filled-white-bank { background: var(--mnd-color-bg-primary); color: var(--mnd-color-text-maribank); }
+.filled-white-bank:hover, .filled-white-bank:active { background: rgba(255,255,255,0.88); }
+.filled-white-bank:disabled { background: rgba(255,255,255,0.4); color: rgba(255,255,255,0.5); }
+
+.filled-black { background: var(--mnd-color-bg-primary); color: var(--mnd-color-text-primary); box-shadow: inset 0 0 0 1px var(--mnd-color-border-tertiary); }
+.filled-black:hover, .filled-black:active { background: var(--mnd-color-bg-secondary); }
+.filled-black:disabled { background: var(--mnd-color-bg-disable); color: var(--mnd-color-text-disable); box-shadow: none; }
+
+/* ============================================================
+   OUTLINE VARIANTS
+   ============================================================ */
+.outline-shopee { background: transparent; color: var(--mnd-color-text-shopee); border-color: var(--mnd-color-fg-shopee); }
+.outline-shopee:hover, .outline-shopee:active { background: var(--mnd-color-bg-shopee); }
+.outline-shopee:disabled { color: var(--mnd-color-text-disable); border-color: var(--mnd-color-border-disable); }
+
+.outline-bank { background: transparent; color: var(--mnd-color-text-maribank); border-color: var(--mnd-color-fg-maribank); }
+.outline-bank:hover, .outline-bank:active { background: var(--mnd-color-bg-maribank); }
+.outline-bank:disabled { color: var(--mnd-color-text-disable); border-color: var(--mnd-color-border-disable); }
+
+.outline-white { background: transparent; color: #fff; border-color: rgba(255,255,255,0.7); }
+.outline-white:hover, .outline-white:active { background: rgba(255,255,255,0.15); }
+.outline-white:disabled { color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.2); }
+
+.outline-black { background: transparent; color: var(--mnd-color-text-primary); border-color: var(--mnd-color-border-tertiary); }
+.outline-black:hover, .outline-black:active { background: var(--mnd-color-bg-secondary); border-color: var(--mnd-color-border-secondary); }
+.outline-black:disabled { color: var(--mnd-color-text-disable); border-color: var(--mnd-color-border-disable); }
+
+/* ============================================================
+   TEXT VARIANTS
+   ============================================================ */
+.text-shopee { background: transparent; color: var(--mnd-color-text-shopee); }
+.text-shopee:hover, .text-shopee:active { color: var(--mnd-color-bg-shopee-overlay); }
+.text-shopee:disabled { color: var(--mnd-color-text-disable); }
+
+.text-bank { background: transparent; color: var(--mnd-color-text-maribank); }
+.text-bank:hover, .text-bank:active { color: var(--mnd-color-bg-maribank-overlay); }
+.text-bank:disabled { color: var(--mnd-color-text-disable); }
+
+.text-black { background: transparent; color: var(--mnd-color-text-primary); }
+.text-black:hover, .text-black:active { color: var(--mnd-color-text-secondary); }
+.text-black:disabled { color: var(--mnd-color-text-disable); }
+
+.text-white { background: transparent; color: #fff; }
+.text-white:disabled { color: rgba(255,255,255,0.3); }
+
+/* ============================================================
+   GRADIENT (Rounded only)
+   ============================================================ */
+.gradient { background: linear-gradient(90deg, #ee4d2d 0%, #fa5e00 100%); color: #fff; }
+.gradient:hover, .gradient:active { background: linear-gradient(90deg, #ca3a1d 0%, #cc3802 100%); }
+.gradient:disabled { background: var(--mnd-color-bg-disable); color: var(--mnd-color-text-disable); }
+
+/* ============================================================
+   LOGIN BUTTON
+   ============================================================ */
+.loginBtn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--mnd-button-height-xl);
+  padding: 0 var(--mnd-padding-3xl);
+  font-size: var(--mnd-font-size-m);
+  font-weight: var(--mnd-font-weight-semibold);
+  font-family: var(--mnd-font-family-plain);
+  border-radius: var(--mnd-radius-l);
+  border: 1px solid transparent;
+  cursor: pointer;
+  gap: var(--mnd-gap-2xl);
+  text-decoration: none;
+  transition: background 0.15s, opacity 0.15s;
+  user-select: none;
+}
+.loginBtn:disabled { cursor: not-allowed; pointer-events: none; }
+
+.loginBtn-shopee  { background: var(--mnd-color-bg-shopee-solid); color: #fff; }
+.loginBtn-shopee:hover  { background: var(--mnd-color-bg-shopee-overlay); }
+.loginBtn-shopee:disabled  { background: var(--mnd-color-bg-disable); color: var(--mnd-color-text-disable); }
+
+.loginBtn-mobile  { background: transparent; color: var(--mnd-color-text-shopee); border-color: var(--mnd-color-fg-shopee); }
+.loginBtn-mobile:hover  { background: var(--mnd-color-bg-shopee); }
+.loginBtn-mobile:disabled  { color: var(--mnd-color-text-disable); border-color: var(--mnd-color-border-disable); }
+
+.loginBtn-social  { background: var(--mnd-color-bg-primary); color: var(--mnd-color-text-primary); border-color: var(--mnd-color-border-tertiary); }
+.loginBtn-social:hover  { background: var(--mnd-color-bg-secondary); }
+.loginBtn-social:disabled  { color: var(--mnd-color-text-disable); border-color: var(--mnd-color-border-disable); }
+
+.loginBtnIcon   { width: 24px; height: 24px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.loginBtnLabel  { flex: 1; text-align: center; margin-right: 24px; }
+
+/* ============================================================
+   BUTTON GROUP
+   ============================================================ */
+.btnGroup { display: flex; gap: var(--mnd-gap-2xl); }
+.btnGroup-horizontal .btn { flex: 1; }
+.btnGroup-vertical { flex-direction: column; }
+.btnGroup-vertical .btn { width: 100%; }
