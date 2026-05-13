@@ -1,0 +1,35 @@
+/* ============================================================
+   MONEE DESIGN SYSTEM — Toast Component
+   ============================================================ */
+
+.toast {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 295px;
+  padding: 20px 20px 24px;
+  background: #2a2a2a;
+  border-radius: 16px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
+.message {
+  font-family: var(--mnd-font-family-plain);
+  font-size: var(--mnd-font-size-s);
+  font-weight: var(--mnd-font-weight-regular);
+  line-height: var(--mnd-line-height-s);
+  color: #fff;
+  margin: 0;
+}

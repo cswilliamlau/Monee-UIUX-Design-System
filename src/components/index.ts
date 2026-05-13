@@ -12,3 +12,6 @@ export type { ButtonProps, ButtonVariant, ButtonColor, ButtonSize, ButtonGroupPr
 
 export { Dialog } from './Dialog/Dialog';
 export type { DialogProps, DialogBrand, DialogImageRatio, DialogButtonLayout } from './Dialog/Dialog';
+
+export { Toast } from './Toast/Toast';
+export type { ToastProps, ToastStatus, ToastVariant } from './Toast/Toast';

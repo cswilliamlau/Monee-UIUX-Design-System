@@ -59,7 +59,7 @@ const PhoneFrame = ({ children, height = 520 }: { children: React.ReactNode; hei
 // ─── Meta ─────────────────────────────────────────────────────────────────────
 
 const meta: Meta<typeof Dialog> = {
-  title: 'Components/Dialog',
+  title: 'Feedback/Dialog',
   component: Dialog,
   tags: ['autodocs'],
   parameters: {

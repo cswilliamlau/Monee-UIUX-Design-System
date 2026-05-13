@@ -6,7 +6,7 @@ import '../../tokens/tokens.css';
 // ─── Meta ─────────────────────────────────────────────────────────────────────
 
 const meta: Meta<typeof Badge> = {
-  title: 'Components/Badge',
+  title: 'Feedback/Badge',
   component: Badge,
   tags: ['autodocs'],
   parameters: {

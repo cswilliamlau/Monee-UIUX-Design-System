@@ -6,7 +6,7 @@ import '../../tokens/tokens.css';
 // ─── Meta ─────────────────────────────────────────────────────────────────────
 
 const meta: Meta<typeof Tips> = {
-  title: 'Components/Tips',
+  title: 'Feedback/Tips',
   component: Tips,
   tags: ['autodocs'],
   parameters: {
