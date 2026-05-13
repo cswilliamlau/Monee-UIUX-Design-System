@@ -4,11 +4,11 @@ import styles from './Tooltip.module.css';
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 export type TooltipType    = 'basic' | 'onboarding';
-export type TooltipVariant = 'default' | 'brand' | 'outlined';
+export type TooltipVariant = 'default' | 'brand';
 
 /**
- * Position names follow the pattern: <side of anchor>-<alignment on that side>.
- * e.g. "bottom-center" → tooltip appears below the anchor, arrow centred.
+ * Position = which side of the anchor the tooltip appears on + caret alignment.
+ * e.g. "bottom-center" → tooltip below the anchor, caret centred at top.
  */
 export type TooltipPosition =
   | 'bottom-center' | 'bottom-left'   | 'bottom-right'
@@ -18,15 +18,23 @@ export type TooltipPosition =
 
 export interface TooltipProps {
   type?: TooltipType;
-  /** Visual style — only applies to type="onboarding" */
+  /**
+   * Visual style (onboarding only):
+   * - `default` — white bg, black title
+   * - `brand`   — light shopee-tint bg (#fff6f4), orange title
+   */
   variant?: TooltipVariant;
-  /** Which side the arrow is on and its alignment */
+  /**
+   * Adds a shopee-coloured border. Only meaningful with variant="brand".
+   */
+  outlined?: boolean;
+  /** Which side the caret appears on and its alignment */
   position?: TooltipPosition;
-  /** Bold orange title — onboarding only */
+  /** Bold title — onboarding only */
   title?: string;
   /** Body text */
   content: string;
-  /** Step indicator string, e.g. "1/3" */
+  /** Step indicator, e.g. "1/3" */
   step?: string;
   skipLabel?: string;
   nextLabel?: string;
@@ -37,8 +45,7 @@ export interface TooltipProps {
 
 // ─── Arrow direction helpers ──────────────────────────────────────────────────
 
-// Map position → which face the arrow protrudes from, and H/V alignment
-type ArrowDir = 'Up' | 'Down' | 'Left' | 'Right';
+type ArrowDir   = 'Up' | 'Down' | 'Left' | 'Right';
 type ArrowAlign = 'Center' | 'HLeft' | 'HRight' | 'VTop' | 'VBottom';
 
 const POSITION_MAP: Record<TooltipPosition, [ArrowDir, ArrowAlign]> = {
@@ -61,6 +68,7 @@ const POSITION_MAP: Record<TooltipPosition, [ArrowDir, ArrowAlign]> = {
 export const Tooltip: React.FC<TooltipProps> = ({
   type      = 'basic',
   variant   = 'default',
+  outlined  = false,
   position  = 'bottom-center',
   title,
   content,
@@ -73,11 +81,11 @@ export const Tooltip: React.FC<TooltipProps> = ({
 }) => {
   const [arrowDir, arrowAlign] = POSITION_MAP[position];
 
-  const wrapperCls = [
+  const cls = [
     styles.tooltip,
     styles[type],
-    type === 'onboarding' && variant === 'brand'    ? styles.brand    : '',
-    type === 'onboarding' && variant === 'outlined' ? styles.outlined : '',
+    type === 'onboarding' && variant === 'brand' ? styles.brand    : '',
+    type === 'onboarding' && outlined            ? styles.outlined : '',
     styles[`arrow${arrowDir}`],
     arrowAlign === 'HLeft'   ? styles.arrowHLeft   : '',
     arrowAlign === 'HRight'  ? styles.arrowHRight  : '',
@@ -87,7 +95,7 @@ export const Tooltip: React.FC<TooltipProps> = ({
   ].filter(Boolean).join(' ');
 
   return (
-    <div className={wrapperCls}>
+    <div className={cls}>
       <span className={styles.arrow} />
 
       {type === 'basic' && (

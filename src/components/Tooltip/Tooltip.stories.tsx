@@ -38,8 +38,8 @@ import { Tooltip } from '@monee/design-system';
   onNext={() => {}}
 />
 
-// Onboarding — outlined
-<Tooltip type="onboarding" variant="outlined" position="top-right"
+// Onboarding — outlined (brand + border)
+<Tooltip type="onboarding" variant="brand" outlined position="top-right"
   title="Title content" content="Please input content here."
   step="2/3" onSkip={() => {}} onNext={() => {}} />
 \`\`\`
@@ -48,8 +48,9 @@ import { Tooltip } from '@monee/design-system';
     },
   },
   argTypes: {
-    type:     { control: 'radio',  options: ['basic', 'onboarding'] },
-    variant:  { control: 'radio',  options: ['default', 'brand', 'outlined'] },
+    type:     { control: 'radio',   options: ['basic', 'onboarding'] },
+    variant:  { control: 'radio',   options: ['default', 'brand'] },
+    outlined: { control: 'boolean' },
     position: { control: 'select', options: [
       'bottom-center', 'bottom-left', 'bottom-right',
       'top-center', 'top-left', 'top-right',
@@ -210,7 +211,7 @@ export const OnboardingOutlined: Story = {
       {(['bottom-center', 'top-center', 'left-center', 'right-center'] as const).map((p) => (
         <div key={p} style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
           <span style={{ fontSize: 9, color: '#a3a3a3', textAlign: 'center' }}>{p}</span>
-          <Tooltip type="onboarding" variant="outlined" position={p} title="Title content" content="Please input content here." step="1/3" onSkip={() => {}} onNext={() => {}} />
+          <Tooltip type="onboarding" variant="brand" outlined position={p} title="Title content" content="Please input content here." step="1/3" onSkip={() => {}} onNext={() => {}} />
         </div>
       ))}
     </div>
@@ -244,7 +245,7 @@ export const InContext: Story = {
         <Label>Onboarding outlined — side arrow</Label>
         <div style={{ display: 'flex', alignItems: 'center', gap: 0 }}>
           <Anchor>+</Anchor>
-          <Tooltip type="onboarding" variant="outlined" position="right-center" title="Add a Card" content="Link your card to start making payments instantly." step="2/4" onSkip={() => {}} onNext={() => {}} />
+          <Tooltip type="onboarding" variant="brand" outlined position="right-center" title="Add a Card" content="Link your card to start making payments instantly." step="2/4" onSkip={() => {}} onNext={() => {}} />
         </div>
       </div>
 

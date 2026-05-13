@@ -2,6 +2,7 @@
    MONEE DESIGN SYSTEM — Tooltip Component
    ============================================================ */
 
+/* --tt-bg drives the arrow colour so it always matches the bubble */
 .tooltip {
   position: relative;
   display: inline-block;
@@ -10,61 +11,70 @@
 }
 
 /* ============================================================
-   BASIC TOOLTIP (overlay / dark)
+   BASIC TOOLTIP (dark overlay)
    ============================================================ */
 .basic {
-  background: rgba(34, 34, 34, 0.95);
+  --tt-bg: rgba(34, 34, 34, 0.95);
+  background: var(--tt-bg);
   border-radius: var(--mnd-radius-m);
   padding: 10px 12px;
 }
 
 .basic .content {
   font-family: var(--mnd-font-family-plain);
-  font-size: var(--mnd-font-size-s);     /* 12px */
+  font-size: var(--mnd-font-size-s);
   font-weight: var(--mnd-font-weight-regular);
-  line-height: var(--mnd-line-height-s); /* 16px */
+  line-height: var(--mnd-line-height-s);
   color: #fff;
 }
 
 /* ============================================================
-   ONBOARDING TOOLTIP
+   ONBOARDING TOOLTIP — default (white bg, black title)
    ============================================================ */
 .onboarding {
-  background: var(--mnd-color-bg-primary);
+  --tt-bg: var(--mnd-color-bg-primary);
+  background: var(--tt-bg);
   border-radius: var(--mnd-radius-l);
-  padding: 12px 16px 12px 16px;
+  padding: 12px 16px;
   border: 1px solid transparent;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
-.onboarding.outlined {
-  border-color: var(--mnd-color-border-shopee-solid);
-}
-
-/* default variant: black title */
 .onboarding .title {
   font-family: var(--mnd-font-family-plain);
-  font-size: var(--mnd-font-size-m);       /* 14px */
+  font-size: var(--mnd-font-size-m);
   font-weight: var(--mnd-font-weight-semibold);
-  line-height: var(--mnd-line-height-m);   /* 18px */
+  line-height: var(--mnd-line-height-m);
   color: var(--mnd-color-text-primary);
   margin-bottom: 4px;
-}
-/* brand / outlined variants: orange title */
-.onboarding.brand .title,
-.onboarding.outlined .title {
-  color: var(--mnd-color-text-shopee);
 }
 
 .onboarding .content {
   font-family: var(--mnd-font-family-plain);
-  font-size: var(--mnd-font-size-s);       /* 12px */
+  font-size: var(--mnd-font-size-s);
   font-weight: var(--mnd-font-weight-regular);
-  line-height: var(--mnd-line-height-s);   /* 16px */
+  line-height: var(--mnd-line-height-s);
   color: var(--mnd-color-text-secondary);
 }
 
-/* ---- Footer (step + buttons) ---- */
+/* ============================================================
+   ONBOARDING TOOLTIP — brand (light orange bg, orange title)
+   ============================================================ */
+.onboarding.brand {
+  --tt-bg: var(--mnd-color-bg-shopee);   /* #fff6f4 */
+  background: var(--tt-bg);
+}
+
+.onboarding.brand .title {
+  color: var(--mnd-color-text-shopee);   /* #ee4d2d */
+}
+
+/* brand + outlined adds a shopee-coloured border */
+.onboarding.brand.outlined {
+  border-color: var(--mnd-color-fg-shopee);
+}
+
+/* ---- Footer ---- */
 .footer {
   display: flex;
   align-items: center;
@@ -74,7 +84,7 @@
 
 .step {
   font-family: var(--mnd-font-family-plain);
-  font-size: var(--mnd-font-size-xs);      /* 11px */
+  font-size: var(--mnd-font-size-xs);
   color: var(--mnd-color-text-shopee);
 }
 
@@ -87,7 +97,7 @@
   height: 24px;
   padding: 0 10px;
   border-radius: var(--mnd-radius-m);
-  border: 1px solid var(--mnd-color-border-shopee-solid);
+  border: 1px solid var(--mnd-color-fg-shopee);
   background: transparent;
   color: var(--mnd-color-text-shopee);
   font-family: var(--mnd-font-family-plain);
@@ -112,7 +122,7 @@
 }
 
 /* ============================================================
-   ARROW / CARET
+   ARROW — always filled with --tt-bg so it matches the bubble
    ============================================================ */
 .arrow {
   position: absolute;
@@ -121,86 +131,50 @@
   pointer-events: none;
 }
 
-/* ---- Basic arrow colours ---- */
-.basic  .arrow { border-color: rgba(34, 34, 34, 0.95); }
-.onboarding .arrow { border-color: var(--mnd-color-bg-primary); }
-.onboarding.outlined .arrow { border-color: var(--mnd-color-bg-primary); }
-
-/* ---- Arrow pointing UP (tooltip below anchor) ---- */
+/* ---- UP (tooltip below anchor, arrow at top) ---- */
 .arrowUp .arrow {
   top: -8px;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 8px solid currentColor;
-}
-/* outlined version needs a second pseudo border behind it */
-.onboarding.outlined .arrowUp::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  width: 0; height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 9px solid var(--mnd-color-border-shopee-solid);
-  z-index: -1;
-}
-
-/* ---- Arrow pointing DOWN (tooltip above anchor) ---- */
-.arrowDown .arrow {
-  bottom: -8px;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 8px solid currentColor;
-}
-
-/* ---- Arrow pointing LEFT (tooltip to right of anchor) ---- */
-.arrowLeft .arrow {
-  left: -8px;
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-right: 8px solid currentColor;
-}
-
-/* ---- Arrow pointing RIGHT (tooltip to left of anchor) ---- */
-.arrowRight .arrow {
-  right: -8px;
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-left: 8px solid currentColor;
-}
-
-/* ---- Horizontal offset (for up/down arrows) ---- */
-.arrowUp .arrow,
-.arrowDown .arrow {
   left: 50%;
   transform: translateX(-50%);
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 8px solid var(--tt-bg);
 }
-.arrowHLeft .arrowUp .arrow,
-.arrowHLeft .arrowDown .arrow {
-  left: 16px;
-  transform: none;
-}
-.arrowHRight .arrowUp .arrow,
-.arrowHRight .arrowDown .arrow {
-  left: auto;
-  right: 16px;
-  transform: none;
-}
+.arrowUp.arrowHLeft .arrow  { left: 16px; transform: none; }
+.arrowUp.arrowHRight .arrow { left: auto; right: 16px; transform: none; }
 
-/* ---- Vertical offset (for left/right arrows) ---- */
-.arrowLeft .arrow,
-.arrowRight .arrow {
+/* ---- DOWN (tooltip above anchor, arrow at bottom) ---- */
+.arrowDown .arrow {
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 8px solid var(--tt-bg);
+}
+.arrowDown.arrowHLeft .arrow  { left: 16px; transform: none; }
+.arrowDown.arrowHRight .arrow { left: auto; right: 16px; transform: none; }
+
+/* ---- LEFT (tooltip to right of anchor, arrow at left) ---- */
+.arrowLeft .arrow {
+  left: -8px;
   top: 50%;
   transform: translateY(-50%);
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 8px solid var(--tt-bg);
 }
-.arrowVTop .arrowLeft .arrow,
-.arrowVTop .arrowRight .arrow {
-  top: 16px;
-  transform: none;
+.arrowLeft.arrowVTop .arrow    { top: 16px; transform: none; }
+.arrowLeft.arrowVBottom .arrow { top: auto; bottom: 16px; transform: none; }
+
+/* ---- RIGHT (tooltip to left of anchor, arrow at right) ---- */
+.arrowRight .arrow {
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 8px solid var(--tt-bg);
 }
-.arrowVBottom .arrowLeft .arrow,
-.arrowVBottom .arrowRight .arrow {
-  top: auto;
-  bottom: 16px;
-  transform: none;
-}
+.arrowRight.arrowVTop .arrow    { top: 16px; transform: none; }
+.arrowRight.arrowVBottom .arrow { top: auto; bottom: 16px; transform: none; }
