@@ -1,0 +1,258 @@
+/* ============================================================
+   MONEE DESIGN SYSTEM — TopBar Component
+   ============================================================ */
+
+.topBar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* ── Background variants ─────────────────────────────────── */
+
+.bgWhite {
+  background: var(--mnd-color-bg-primary);
+  color: var(--mnd-color-text-primary);
+}
+
+.bgOrange {
+  background: var(--mnd-color-bg-shopee-solid);
+  color: #ffffff;
+}
+
+.bgTransparent {
+  background: transparent;
+  color: #ffffff;
+}
+
+.shadow {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Status bar ──────────────────────────────────────────── */
+
+.statusBar {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 12px;
+}
+
+.statusRight {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.statusTime {
+  font-family: var(--mnd-font-family-plain);
+  font-size: var(--mnd-font-size-xs);
+  font-weight: var(--mnd-font-weight-semibold);
+  line-height: 1;
+  margin-left: 2px;
+}
+
+/* ── Main bar (default / search / image) ─────────────────── */
+
+.mainBar {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 8px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.title {
+  font-family: var(--mnd-font-family-plain);
+  font-size: var(--mnd-font-size-l);
+  font-weight: var(--mnd-font-weight-semibold);
+  line-height: var(--mnd-line-height-l);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.iconBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  flex-shrink: 0;
+}
+
+.iconBtnSm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* ── Search ──────────────────────────────────────────────── */
+
+.searchWrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-radius: var(--mnd-radius-full);
+  padding: 0 12px;
+  gap: 8px;
+  min-width: 0;
+}
+
+/* pill background changes with parent bg */
+.bgWhite .searchWrap {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.bgOrange .searchWrap,
+.bgTransparent .searchWrap {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.searchAdorn {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+.searchPlaceholder {
+  flex: 1;
+  font-family: var(--mnd-font-family-plain);
+  font-size: var(--mnd-font-size-m);
+  opacity: 0.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Subtitle type ───────────────────────────────────────── */
+
+.subtitleBar {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 20px 20px;
+}
+
+.subtitleTitle {
+  font-family: var(--mnd-font-family-plain);
+  font-size: var(--mnd-font-size-4xl);
+  font-weight: var(--mnd-font-weight-bold);
+  line-height: var(--mnd-line-height-4xl);
+  margin: 12px 0 8px;
+  color: inherit;
+}
+
+.subtitleText {
+  font-family: var(--mnd-font-family-plain);
+  font-size: var(--mnd-font-size-s);
+  font-weight: var(--mnd-font-weight-regular);
+  line-height: var(--mnd-line-height-xl);
+  color: var(--mnd-color-text-secondary);
+  margin: 0;
+}
+
+/* bgOrange / bgTransparent subtitle text stays white */
+.bgOrange .subtitleText,
+.bgTransparent .subtitleText {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* ── Homepage type ───────────────────────────────────────── */
+
+.homepageLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.avatar {
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.userName {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--mnd-font-family-plain);
+  font-size: var(--mnd-font-size-m);
+  font-weight: var(--mnd-font-weight-semibold);
+  line-height: var(--mnd-line-height-m);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.accountRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.accountNumber {
+  font-family: var(--mnd-font-family-plain);
+  font-size: var(--mnd-font-size-xs);
+  font-weight: var(--mnd-font-weight-regular);
+  opacity: 0.65;
+}
+
+/* ── Notification badge ──────────────────────────────────── */
+
+.badge {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  background: #f64356;
+  color: #fff;
+  border-radius: var(--mnd-radius-full);
+  min-width: 16px;
+  height: 16px;
+  padding: 0 3px;
+  font-family: var(--mnd-font-family-plain);
+  font-size: 10px;
+  font-weight: var(--mnd-font-weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}

@@ -15,3 +15,6 @@ export type { DialogProps, DialogBrand, DialogImageRatio, DialogButtonLayout } f
 
 export { Toast } from './Toast/Toast';
 export type { ToastProps, ToastStatus, ToastVariant } from './Toast/Toast';
+
+export { TopBar } from './TopBar/TopBar';
+export type { TopBarProps, TopBarType, TopBarBgColor } from './TopBar/TopBar';
