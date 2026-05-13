@@ -1,0 +1,55 @@
+/* ============================================================
+   MONEE DESIGN SYSTEM — Badge Component
+   ============================================================ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mnd-font-family-plain);
+  font-weight: var(--mnd-font-weight-semibold);
+  line-height: 1;
+  white-space: nowrap;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+/* ---- Dot ---- */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--mnd-radius-full);
+  background: var(--mnd-color-bg-shopee-solid);
+}
+.dot.inversed {
+  background: #fff;
+}
+
+/* ---- Count ---- */
+.count {
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: var(--mnd-radius-full);
+  font-size: var(--mnd-font-size-xs);  /* 11px */
+  background: var(--mnd-color-bg-shopee-solid);
+  color: #fff;
+}
+.count.inversed {
+  background: #fff;
+  color: var(--mnd-color-text-shopee);
+}
+
+/* ---- New ---- */
+.new {
+  height: 18px;
+  padding: 0 6px;
+  border-radius: var(--mnd-radius-full);
+  font-size: var(--mnd-font-size-xs);  /* 11px */
+  background: var(--mnd-color-bg-shopee-solid);
+  color: #fff;
+}
+.new.inversed {
+  background: #fff;
+  color: var(--mnd-color-text-shopee);
+}
