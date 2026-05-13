@@ -1,6 +1,9 @@
 export { Badge } from './Badge/Badge';
 export type { BadgeProps, BadgeType } from './Badge/Badge';
 
+export { Tips } from './Tips/Tips';
+export type { TipsProps, TipsStatus, TipsMode, TipsAction } from './Tips/Tips';
+
 export { Button, ButtonGroup, LoginButton } from './Button/Button';
 export type { ButtonProps, ButtonVariant, ButtonColor, ButtonSize, ButtonGroupProps, ButtonGroupLayout, LoginButtonProps, LoginVariant } from './Button/Button';
 

@@ -1,0 +1,127 @@
+/* ============================================================
+   MONEE DESIGN SYSTEM — Tips Component
+   ============================================================ */
+
+.tips {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid transparent;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ---- Mode ---- */
+.full-width {
+  border-radius: 0;
+}
+.card {
+  border-radius: var(--mnd-radius-l);
+  padding: 12px 16px;
+}
+
+/* ============================================================
+   STATUS — background + outlined border
+   ============================================================ */
+
+/* info (light blue) */
+.status-info         { background: #e8f3ff; }
+.status-info.outlined { border-color: #93c5fd; }
+
+/* info-grey */
+.status-info-grey          { background: var(--mnd-color-bg-secondary); }
+.status-info-grey.outlined  { border-color: var(--mnd-color-border-disable); }
+
+/* warning */
+.status-warning          { background: var(--mnd-color-bg-warning); }
+.status-warning.outlined  { border-color: var(--mnd-color-border-warning); }
+
+/* error */
+.status-error          { background: var(--mnd-color-bg-error); }
+.status-error.outlined  { border-color: var(--mnd-color-border-error); }
+
+/* success */
+.status-success          { background: var(--mnd-color-bg-success); }
+.status-success.outlined  { border-color: var(--mnd-color-border-success); }
+
+/* shopee */
+.status-shopee          { background: var(--mnd-color-bg-shopee); }
+.status-shopee.outlined  { border-color: var(--mnd-color-border-shopee); }
+
+/* bank */
+.status-bank          { background: var(--mnd-color-bg-maribank); }
+.status-bank.outlined  { border-color: var(--mnd-color-border-maribank); }
+
+/* ============================================================
+   ICON
+   ============================================================ */
+.icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ============================================================
+   TEXT AREA
+   ============================================================ */
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.title {
+  font-family: var(--mnd-font-family-plain);
+  font-size: var(--mnd-font-size-m);       /* 14px */
+  font-weight: var(--mnd-font-weight-semibold);
+  line-height: var(--mnd-line-height-m);   /* 18px */
+  color: var(--mnd-color-text-primary);
+}
+
+.content {
+  font-family: var(--mnd-font-family-plain);
+  font-size: var(--mnd-font-size-m);       /* 14px */
+  font-weight: var(--mnd-font-weight-regular);
+  line-height: var(--mnd-line-height-m);   /* 18px */
+  color: var(--mnd-color-text-secondary);
+}
+
+/* ============================================================
+   RIGHT ACTION
+   ============================================================ */
+.action {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-left: 4px;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: var(--mnd-radius-m);
+  border: 1px solid transparent;
+  font-family: var(--mnd-font-family-plain);
+  font-size: var(--mnd-font-size-s);       /* 12px */
+  font-weight: var(--mnd-font-weight-semibold);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* status-specific action button colours */
+.status-info     .actionBtn,
+.status-info-grey .actionBtn { background: transparent; color: #1c64f0; border-color: #93c5fd; }
+.status-warning  .actionBtn  { background: transparent; color: var(--mnd-color-text-primary); border-color: var(--mnd-color-border-warning); }
+.status-error    .actionBtn  { background: transparent; color: var(--mnd-color-text-primary); border-color: var(--mnd-color-border-error); }
+.status-success  .actionBtn  { background: transparent; color: var(--mnd-color-text-primary); border-color: var(--mnd-color-border-success); }
+.status-shopee   .actionBtn  { background: transparent; color: var(--mnd-color-text-shopee);  border-color: var(--mnd-color-border-shopee); }
+.status-bank     .actionBtn  { background: transparent; color: var(--mnd-color-text-maribank); border-color: var(--mnd-color-border-maribank); }
