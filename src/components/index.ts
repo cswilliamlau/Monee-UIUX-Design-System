@@ -24,3 +24,6 @@ export type { BottomNavProps, BottomNavItem } from './BottomNav/BottomNav';
 
 export { TabGroup } from './TabGroup/TabGroup';
 export type { TabGroupProps, TabGroupVariant, TabGroupSize, TabItem } from './TabGroup/TabGroup';
+
+export { StepBar } from './StepBar/StepBar';
+export type { StepBarProps, StepBarOrientation, StepStatus, StepItem } from './StepBar/StepBar';

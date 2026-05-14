@@ -1,0 +1,143 @@
+/* ============================================================
+   MONEE DESIGN SYSTEM — StepBar Component
+   ============================================================ */
+
+/* ── Shared circle ───────────────────────────────────────── */
+
+.circle {
+  width:        10px;
+  height:       10px;
+  border-radius: 50%;
+  flex-shrink:  0;
+}
+
+/* done  — orange hollow ring */
+.circle_done {
+  border: 1.5px solid var(--mnd-color-fg-shopee);
+  background: transparent;
+}
+
+/* doing — orange solid */
+.circle_doing {
+  background: var(--mnd-color-fg-shopee);
+}
+
+/* not-yet — gray hollow ring */
+.circle_notyet {
+  border: 1.5px solid #c8c8c8;
+  background: transparent;
+}
+
+/* ── Vertical layout ─────────────────────────────────────── */
+
+.vWrap {
+  display:        flex;
+  flex-direction: column;
+}
+
+.vStep {
+  display: flex;
+  gap:     12px;
+}
+
+/* indicator column: circle + connector line */
+.vIndicatorCol {
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  width:          20px;
+  flex-shrink:    0;
+  padding-top:    3px; /* align circle with first line of text */
+}
+
+.vLine {
+  width:   1.5px;
+  flex:    1;
+  min-height: 20px;
+}
+
+.vLine_done  { background: var(--mnd-color-fg-shopee); }
+.vLine_doing { background: var(--mnd-color-fg-shopee); }
+.vLine_notyet { background: #c8c8c8; }
+
+/* content column */
+.vContent {
+  display:        flex;
+  flex-direction: column;
+  gap:            2px;
+  padding-bottom: 20px;
+}
+
+.vTitle {
+  font-family: var(--mnd-font-family-plain);
+  font-size:   var(--mnd-font-size-m);
+  font-weight: var(--mnd-font-weight-semibold);
+  line-height: var(--mnd-line-height-m);
+}
+
+.vTitle_done   { color: var(--mnd-color-text-primary); }
+.vTitle_doing  { color: var(--mnd-color-fg-shopee); }
+.vTitle_notyet { color: var(--mnd-color-text-tertiary, #b0b0b0); }
+
+.vSubtitle {
+  font-family: var(--mnd-font-family-plain);
+  font-size:   var(--mnd-font-size-s);
+  line-height: var(--mnd-line-height-s);
+  color:       var(--mnd-color-text-tertiary, #b0b0b0);
+}
+
+/* ── Horizontal layout ───────────────────────────────────── */
+
+.hWrap {
+  display:   flex;
+  flex-direction: column;
+  width:     100%;
+  gap:       6px;
+  padding:   0 16px;
+  box-sizing: border-box;
+}
+
+/* track row: dots + bars */
+.hTrack {
+  display:     flex;
+  align-items: center;
+  width:       100%;
+}
+
+.hDot {
+  width:        10px;
+  height:       10px;
+  border-radius: 50%;
+  flex-shrink:  0;
+}
+
+.hDot_done   { border: 1.5px solid var(--mnd-color-fg-shopee); background: transparent; }
+.hDot_doing  { background: var(--mnd-color-fg-shopee); }
+.hDot_notyet { border: 1.5px solid #c8c8c8; background: transparent; }
+
+.hBar {
+  flex:   1;
+  height: 2px;
+}
+
+.hBar_active   { background: var(--mnd-color-fg-shopee); }
+.hBar_inactive { background: #e0e0e0; }
+
+/* labels row */
+.hLabels {
+  display:         flex;
+  justify-content: space-between;
+}
+
+.hLabel {
+  font-family: var(--mnd-font-family-plain);
+  font-size:   var(--mnd-font-size-s);
+  line-height: var(--mnd-line-height-s);
+  font-weight: var(--mnd-font-weight-medium);
+  flex:        1;
+  text-align:  center;
+}
+
+.hLabel_done   { color: var(--mnd-color-text-primary); }
+.hLabel_doing  { color: var(--mnd-color-fg-shopee); font-weight: var(--mnd-font-weight-semibold); }
+.hLabel_notyet { color: var(--mnd-color-text-tertiary, #b0b0b0); }
