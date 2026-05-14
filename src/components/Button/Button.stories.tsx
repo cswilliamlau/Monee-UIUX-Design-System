@@ -6,7 +6,7 @@ import '../../tokens/tokens.css';
 // ─── Meta ─────────────────────────────────────────────────────────────────────
 
 const meta: Meta<typeof Button> = {
-  title: 'Components/Button',
+  title: 'Action/Button',
   component: Button,
   tags: ['autodocs'],
   parameters: {
