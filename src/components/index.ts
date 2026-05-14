@@ -21,3 +21,6 @@ export type { TopBarProps, TopBarType, TopBarBgColor } from './TopBar/TopBar';
 
 export { BottomNav } from './BottomNav/BottomNav';
 export type { BottomNavProps, BottomNavItem } from './BottomNav/BottomNav';
+
+export { TabGroup } from './TabGroup/TabGroup';
+export type { TabGroupProps, TabGroupVariant, TabGroupSize, TabItem } from './TabGroup/TabGroup';

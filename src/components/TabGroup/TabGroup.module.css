@@ -1,0 +1,104 @@
+/* ============================================================
+   MONEE DESIGN SYSTEM — TabGroup Component
+   ============================================================ */
+
+.tabGroup {
+  display: flex;
+  width: 100%;
+  background: var(--mnd-color-bg-primary);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+/* ── Layout variants ─────────────────────────────────────── */
+
+/* Tabs share the width equally */
+.default .tab {
+  flex: 1;
+}
+
+/* Tabs hug label width; bar scrolls */
+.scrollableHug {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.scrollableHug::-webkit-scrollbar { display: none; }
+.scrollableHug .tab {
+  flex: 0 0 auto;
+  padding: 0 16px;
+}
+
+/* Tabs have a fixed pixel width; bar scrolls */
+.scrollableFix {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.scrollableFix::-webkit-scrollbar { display: none; }
+.scrollableFix .tab {
+  flex: 0 0 auto;  /* width is set inline via tabWidth prop */
+}
+
+/* ── Size ────────────────────────────────────────────────── */
+
+.sizeNormal .tab { height: 52px; }
+.sizeSmall  .tab { height: 42px; }
+
+.sizeNormal .label {
+  font-size:   var(--mnd-font-size-m);
+  line-height: var(--mnd-line-height-m);
+}
+
+.sizeSmall .label {
+  font-size:   var(--mnd-font-size-s);
+  line-height: var(--mnd-line-height-s);
+}
+
+/* ── Tab button ──────────────────────────────────────────── */
+
+.tab {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  background:      none;
+  border:          none;
+  padding:         0;
+  cursor:          pointer;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing:      border-box;
+}
+
+/* ── Inner layout (label + indicator stacked) ────────────── */
+
+.labelWrap {
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  gap:            4px;
+}
+
+/* ── Label ───────────────────────────────────────────────── */
+
+.label {
+  font-family: var(--mnd-font-family-plain);
+  font-weight: var(--mnd-font-weight-medium);
+  color:       var(--mnd-color-text-secondary);
+  white-space: nowrap;
+  transition:  color 0.15s, font-weight 0.15s;
+}
+
+.active .label {
+  color:       var(--mnd-color-fg-shopee);
+  font-weight: var(--mnd-font-weight-semibold);
+}
+
+/* ── Active indicator line ───────────────────────────────── */
+
+.indicator {
+  display:       block;
+  width:         100%;  /* matches label text width via labelWrap */
+  height:        2px;
+  border-radius: var(--mnd-radius-full);
+  background:    var(--mnd-color-fg-shopee);
+}
