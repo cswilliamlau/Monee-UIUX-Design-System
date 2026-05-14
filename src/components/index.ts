@@ -30,3 +30,6 @@ export type { StepBarProps, StepBarOrientation, StepStatus, StepItem } from './S
 
 export { TextInput } from './TextInput/TextInput';
 export type { TextInputProps, TextInputVariant, TextInputState, TextInputSize } from './TextInput/TextInput';
+
+export { SearchBox } from './SearchBox/SearchBox';
+export type { SearchBoxProps, SearchBoxColor, SearchBoxSize } from './SearchBox/SearchBox';

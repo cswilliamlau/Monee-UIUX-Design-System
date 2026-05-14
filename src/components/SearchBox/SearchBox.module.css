@@ -1,0 +1,111 @@
+/* ============================================================
+   MONEE DESIGN SYSTEM — SearchBox Component
+   ============================================================ */
+
+.root {
+  display:         flex;
+  align-items:     center;
+  width:           100%;
+  border-radius:   100px; /* full pill */
+  padding:         0 12px;
+  gap:             6px;
+  box-sizing:      border-box;
+  transition:      box-shadow 0.15s, background 0.15s;
+}
+
+/* ── Color variants ──────────────────────────────────────── */
+
+/* grey — used on white / light page backgrounds */
+.color_grey  {
+  background: rgba(0, 0, 0, 0.06);
+  color:      var(--mnd-color-text-secondary);
+}
+
+/* white — used on orange / coloured backgrounds (e.g. TopBar) */
+.color_white {
+  background: #ffffff;
+  color:      var(--mnd-color-text-secondary);
+}
+
+/* subtle ring on focus */
+.focused.color_grey  { box-shadow: 0 0 0 1.5px rgba(0,0,0,0.18); }
+.focused.color_white { box-shadow: 0 0 0 1.5px rgba(255,255,255,0.6); }
+
+/* ── Size ────────────────────────────────────────────────── */
+
+.size_normal { height: 44px; }
+.size_topbar { height: 40px; }
+
+/* ── Icons ───────────────────────────────────────────────── */
+
+.searchIcon {
+  display:     flex;
+  align-items: center;
+  flex-shrink: 0;
+  color:       var(--mnd-color-text-tertiary, #b0b0b0);
+}
+
+.iconBtn {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  background:      none;
+  border:          none;
+  padding:         2px;
+  cursor:          pointer;
+  color:           var(--mnd-color-text-tertiary, #b0b0b0);
+  flex-shrink:     0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ── Input ───────────────────────────────────────────────── */
+
+.input {
+  flex:        1;
+  min-width:   0;
+  border:      none;
+  outline:     none;
+  background:  transparent;
+  font-family: var(--mnd-font-family-plain);
+  font-size:   var(--mnd-font-size-m);
+  line-height: var(--mnd-line-height-m);
+  color:       var(--mnd-color-text-primary);
+  caret-color: var(--mnd-color-fg-shopee);
+}
+
+/* hide the browser's native search cancel button */
+.input::-webkit-search-cancel-button { display: none; }
+
+.input::placeholder { color: var(--mnd-color-text-tertiary, #b0b0b0); }
+
+.size_topbar .input { font-size: var(--mnd-font-size-s); }
+
+/* ── Location variant ────────────────────────────────────── */
+
+.divider {
+  width:      1px;
+  height:     20px;
+  background: rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+  margin:     0 2px;
+}
+
+.locationBtn {
+  display:         flex;
+  align-items:     center;
+  gap:             4px;
+  background:      none;
+  border:          none;
+  cursor:          pointer;
+  padding:         0;
+  white-space:     nowrap;
+  flex-shrink:     0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.locationText {
+  font-family: var(--mnd-font-family-plain);
+  font-size:   var(--mnd-font-size-s);
+  font-weight: var(--mnd-font-weight-medium);
+  color:       var(--mnd-color-fg-shopee);
+}
