@@ -27,3 +27,6 @@ export type { TabGroupProps, TabGroupVariant, TabGroupSize, TabItem } from './Ta
 
 export { StepBar } from './StepBar/StepBar';
 export type { StepBarProps, StepBarOrientation, StepStatus, StepItem } from './StepBar/StepBar';
+
+export { TextInput } from './TextInput/TextInput';
+export type { TextInputProps, TextInputVariant, TextInputState, TextInputSize } from './TextInput/TextInput';

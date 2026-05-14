@@ -1,0 +1,139 @@
+/* ============================================================
+   MONEE DESIGN SYSTEM — TextInput Component
+   ============================================================ */
+
+/* ── Root ────────────────────────────────────────────────── */
+
+.root {
+  display:        flex;
+  flex-direction: column;
+  width:          100%;
+  gap:            4px;
+  position:       relative;
+}
+
+/* ── Field background & bottom-border ───────────────────── */
+
+.inputRow {
+  display:          flex;
+  align-items:      center;
+  background:       var(--mnd-color-bg-secondary, #f5f5f5);
+  border-radius:    var(--mnd-radius-s, 4px);
+  border-bottom:    1.5px solid rgba(0, 0, 0, 0.12);
+  transition:       border-color 0.15s, background 0.15s;
+  padding:          0 12px;
+  box-sizing:       border-box;
+}
+
+/* focused → orange bottom border */
+.focused .inputRow {
+  border-bottom-color: var(--mnd-color-fg-shopee);
+}
+
+/* error state */
+.state_error .inputRow {
+  background:          #fff5f5;
+  border-bottom-color: #e53935;
+}
+
+/* warning state */
+.state_warning .inputRow {
+  background:          #fffbf0;
+  border-bottom-color: #f59e0b;
+}
+
+/* disabled state */
+.state_disabled .inputRow {
+  opacity: 0.45;
+  cursor:  not-allowed;
+}
+
+/* ── Size ────────────────────────────────────────────────── */
+
+.size_default .inputRow { height: 44px; }
+.size_small   .inputRow { height: 36px; }
+
+/* ── Input element ───────────────────────────────────────── */
+
+.input {
+  flex:             1;
+  min-width:        0;
+  border:           none;
+  outline:          none;
+  background:       transparent;
+  font-family:      var(--mnd-font-family-plain);
+  font-size:        var(--mnd-font-size-m);
+  line-height:      var(--mnd-line-height-m);
+  color:            var(--mnd-color-text-primary);
+  caret-color:      var(--mnd-color-fg-shopee);
+}
+
+.input::placeholder { color: var(--mnd-color-text-tertiary, #b0b0b0); }
+.input:disabled      { cursor: not-allowed; }
+
+.size_small .input { font-size: var(--mnd-font-size-s); }
+
+/* ── Right icons ─────────────────────────────────────────── */
+
+.icons {
+  display:     flex;
+  align-items: center;
+  gap:         4px;
+  color:       var(--mnd-color-text-tertiary, #b0b0b0);
+  flex-shrink: 0;
+}
+
+.iconBtn {
+  display:          flex;
+  align-items:      center;
+  justify-content:  center;
+  background:       none;
+  border:           none;
+  padding:          2px;
+  cursor:           pointer;
+  color:            inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ── Floating label (withLabel variant) ──────────────────── */
+
+.withLabel { padding-top: 20px; }
+
+.floatingLabel {
+  position:    absolute;
+  top:         28px; /* centered in the input row when not floated */
+  left:        12px;
+  font-family: var(--mnd-font-family-plain);
+  font-size:   var(--mnd-font-size-m);
+  line-height: 1;
+  color:       var(--mnd-color-text-tertiary, #b0b0b0);
+  pointer-events: none;
+  transform-origin: left center;
+  transition:  top 0.15s, font-size 0.15s, color 0.15s;
+}
+
+.floatingLabelUp {
+  top:       4px;
+  font-size: var(--mnd-font-size-xs, 11px);
+  color:     var(--mnd-color-text-secondary);
+}
+
+.focused .floatingLabelUp { color: var(--mnd-color-fg-shopee); }
+.state_error   .floatingLabelUp { color: #e53935; }
+.state_warning .floatingLabelUp { color: #f59e0b; }
+
+/* ── Helper / hint text ──────────────────────────────────── */
+
+.helper {
+  display:     flex;
+  align-items: center;
+  gap:         4px;
+  font-family: var(--mnd-font-family-plain);
+  font-size:   var(--mnd-font-size-xs, 11px);
+  line-height: var(--mnd-line-height-s);
+  padding:     0 4px;
+}
+
+.helperHint    { color: var(--mnd-color-text-tertiary, #b0b0b0); }
+.helperError   { color: #e53935; }
+.helperWarning { color: #f59e0b; }
