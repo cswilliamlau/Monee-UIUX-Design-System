@@ -18,3 +18,6 @@ export type { ToastProps, ToastStatus, ToastVariant } from './Toast/Toast';
 
 export { TopBar } from './TopBar/TopBar';
 export type { TopBarProps, TopBarType, TopBarBgColor } from './TopBar/TopBar';
+
+export { BottomNav } from './BottomNav/BottomNav';
+export type { BottomNavProps, BottomNavItem } from './BottomNav/BottomNav';

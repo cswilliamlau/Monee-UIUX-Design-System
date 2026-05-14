@@ -1,0 +1,130 @@
+/* ============================================================
+   MONEE DESIGN SYSTEM — BottomNav Component
+   ============================================================ */
+
+.wrap {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Extra top space so the raised scan button isn't clipped */
+.hasScan {
+  padding-top: 28px;
+}
+
+/* ── Bar ─────────────────────────────────────────────────── */
+
+.bar {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  height: 56px;
+  background: var(--mnd-color-bg-primary);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+/* ── Regular item ────────────────────────────────────────── */
+
+.item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 8px 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9e9e9e;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.item.active {
+  color: var(--mnd-color-fg-shopee);
+}
+
+.iconWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.label {
+  font-family: var(--mnd-font-family-plain);
+  font-size: var(--mnd-font-size-xs);
+  font-weight: var(--mnd-font-weight-medium);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* ── Scan slot (centre placeholder) ─────────────────────── */
+
+.scanSlot {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 8px;
+  color: #9e9e9e;
+}
+
+/* ── Raised scan circle ──────────────────────────────────── */
+
+.scanCircle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: var(--mnd-radius-full);
+  background: var(--mnd-color-bg-shopee-solid);
+  border: 3px solid var(--mnd-color-bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(238, 77, 45, 0.4);
+  z-index: 1;
+}
+
+/* ── Badge ───────────────────────────────────────────────── */
+
+.dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--mnd-radius-full);
+  background: var(--mnd-color-bg-error-solid);
+  border: 1.5px solid var(--mnd-color-bg-primary);
+}
+
+.pill {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: var(--mnd-radius-full);
+  background: var(--mnd-color-bg-error-solid);
+  color: #fff;
+  font-family: var(--mnd-font-family-plain);
+  font-size: 9px;
+  font-weight: var(--mnd-font-weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1.5px solid var(--mnd-color-bg-primary);
+}
