@@ -33,3 +33,6 @@ export type { TextInputProps, TextInputVariant, TextInputState, TextInputSize } 
 
 export { SearchBox } from './SearchBox/SearchBox';
 export type { SearchBoxProps, SearchBoxColor, SearchBoxSize } from './SearchBox/SearchBox';
+
+export { NumberStepper } from './NumberStepper/NumberStepper';
+export type { NumberStepperProps, StepperSize, StepperUnitPos } from './NumberStepper/NumberStepper';

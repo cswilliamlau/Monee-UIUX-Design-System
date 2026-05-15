@@ -1,0 +1,77 @@
+/* ============================================================
+   MONEE DESIGN SYSTEM — NumberStepper Component
+   ============================================================ */
+
+.root {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             8px;
+  user-select:     none;
+}
+
+/* ── Button ──────────────────────────────────────────────── */
+
+.btn {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  background:      transparent;
+  border-radius:   var(--mnd-radius-xs, 4px);
+  cursor:          pointer;
+  flex-shrink:     0;
+  transition:      border-color 0.15s, color 0.15s, opacity 0.15s;
+  -webkit-tap-highlight-color: transparent;
+  padding:         0;
+  line-height:     1;
+}
+
+.btnActive {
+  border: 1.5px solid var(--mnd-color-fg-shopee);
+  color:  var(--mnd-color-fg-shopee);
+}
+
+.btnActive:active { opacity: 0.7; }
+
+.btnDisabled {
+  border: 1.5px solid #c8c8c8;
+  color:  #c8c8c8;
+  cursor: not-allowed;
+}
+
+/* ── Symbol (+/−) ────────────────────────────────────────── */
+
+.symbol {
+  font-family: var(--mnd-font-family-plain);
+  font-weight: var(--mnd-font-weight-medium);
+  line-height: 1;
+  display:     block;
+}
+
+/* ── Value display ───────────────────────────────────────── */
+
+.value {
+  font-family: var(--mnd-font-family-plain);
+  font-weight: var(--mnd-font-weight-semibold);
+  color:       var(--mnd-color-text-primary);
+  text-align:  center;
+  min-width:   1ch;
+}
+
+.valueDisabled { color: #c8c8c8; }
+
+/* ── Sizes ───────────────────────────────────────────────── */
+
+/* Small: 24×24 btn, 14px font */
+.size_small .btn     { width: 24px; height: 24px; }
+.size_small .symbol  { font-size: 16px; }
+.size_small .value   { font-size: var(--mnd-font-size-s); min-width: 24px; }
+
+/* Regular: 28×28 btn, 16px font */
+.size_regular .btn    { width: 28px; height: 28px; }
+.size_regular .symbol { font-size: 18px; }
+.size_regular .value  { font-size: var(--mnd-font-size-m); min-width: 28px; }
+
+/* Large: 36×36 btn, 20px font */
+.size_large .btn      { width: 36px; height: 36px; }
+.size_large .symbol   { font-size: 22px; }
+.size_large .value    { font-size: var(--mnd-font-size-xl, 20px); min-width: 40px; }
