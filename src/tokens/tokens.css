@@ -307,7 +307,7 @@
   --mnd-color-fg-tertiary-on-solid:    rgba(255, 255, 255, 0.64);
   --mnd-color-fg-disable:              #bebebe;
   --mnd-color-fg-placeholder:          #8c8c8c;
-  --mnd-color-fg-link:                 #1c64f0;
+  --mnd-color-fg-link:                 #397bfc;
   --mnd-color-fg-shopee:               #ee4d2d;
   --mnd-color-fg-maribank:             #fa5e00;
   --mnd-color-fg-success:              #1fbd6a;
@@ -315,9 +315,9 @@
   --mnd-color-fg-error:                #f64356;
   --mnd-color-fg-income:               #2673dd;
   --mnd-color-fg-saveplus:             #ea5f00;
-  --mnd-color-fg-category-amber:       #ff9c00;
-  --mnd-color-fg-category-teal:        #29b79f;
-  --mnd-color-fg-category-blue-dark:   #397bfc;
+  --mnd-color-fg-category-amber:       #f88a05;
+  --mnd-color-fg-category-teal:        #04a48e;
+  --mnd-color-fg-category-blue-dark:   #1c64f0;
 
   /* ----------------------------------------------------------
      SYSTEM: TEXT COLORS
