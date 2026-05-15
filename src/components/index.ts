@@ -36,3 +36,6 @@ export type { SearchBoxProps, SearchBoxColor, SearchBoxSize } from './SearchBox/
 
 export { NumberStepper } from './NumberStepper/NumberStepper';
 export type { NumberStepperProps, StepperSize, StepperUnitPos } from './NumberStepper/NumberStepper';
+
+export { VirtualKeyboard } from './VirtualKeyboard/VirtualKeyboard';
+export type { VirtualKeyboardProps, VirtualKeyboardType, TransferSpecialKey, LoginBiometricType } from './VirtualKeyboard/VirtualKeyboard';

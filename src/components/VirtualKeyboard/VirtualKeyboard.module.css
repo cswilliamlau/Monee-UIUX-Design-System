@@ -1,0 +1,188 @@
+/* ============================================================
+   MONEE DESIGN SYSTEM — VirtualKeyboard Component
+   ============================================================ */
+
+.root {
+  width:      100%;
+  background: #f2f2f2;
+  padding:    6px 4px 8px;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ── Shared key ──────────────────────────────────────────── */
+
+.key {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  border:          none;
+  border-radius:   8px;
+  cursor:          pointer;
+  font-family:     var(--mnd-font-family-plain);
+  font-size:       var(--mnd-font-size-xl, 20px);
+  font-weight:     var(--mnd-font-weight-medium);
+  color:           var(--mnd-color-text-primary);
+  transition:      opacity 0.1s;
+  padding:         0;
+}
+
+.key:active { opacity: 0.5; }
+
+/* white — letter/number key */
+.key_default {
+  background:  #ffffff;
+  box-shadow:  0 1px 0 rgba(0,0,0,0.18);
+}
+
+/* gray — action keys (shift, delete, mode switch, space) */
+.key_action {
+  background: #adb5bd;
+  color:      var(--mnd-color-text-primary);
+  font-size:  var(--mnd-font-size-s);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.18);
+}
+
+/* orange — Done button */
+.key_done {
+  background:  var(--mnd-color-fg-shopee);
+  color:       #ffffff;
+  font-size:   var(--mnd-font-size-m);
+  font-weight: var(--mnd-font-weight-semibold);
+  box-shadow:  0 1px 0 rgba(0,0,0,0.18);
+}
+
+/* invisible — blank spacer key */
+.key_blank {
+  background: transparent;
+  box-shadow: none;
+  cursor:     default;
+  pointer-events: none;
+}
+
+/* login — minimal circle style */
+.key_login {
+  background:  rgba(0, 0, 0, 0.06);
+  box-shadow:  none;
+  border-radius: 50%;
+  font-size:   var(--mnd-font-size-2xl, 24px);
+  font-weight: var(--mnd-font-weight-regular, 400);
+}
+
+/* ── PIN / Login grid ────────────────────────────────────── */
+
+.grid3 {
+  display:               grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:                   6px;
+}
+
+.pinGrid .key {
+  height: 50px;
+}
+
+/* ── Login grid overrides ────────────────────────────────── */
+
+.loginGrid {
+  background: transparent;
+}
+
+.loginGrid .key {
+  height: 64px;
+  width:  64px;
+  justify-self: center;
+}
+
+.loginBiometric {
+  color: var(--mnd-color-text-secondary);
+}
+
+/* ── Transfer grid ───────────────────────────────────────── */
+
+.transferGrid {
+  display:               grid;
+  grid-template-columns: repeat(3, 1fr) 90px;
+  grid-template-rows:    repeat(4, 50px);
+  gap:                   6px;
+}
+
+.transferDelete {
+  grid-column: 4;
+  grid-row:    1;
+  font-size:   16px;
+}
+
+/* Done spans rows 2–4 in column 4 */
+.transferDone {
+  grid-column:     4;
+  grid-row:        2 / 5;
+  background:      var(--mnd-color-fg-shopee);
+  color:           #ffffff;
+  font-family:     var(--mnd-font-family-plain);
+  font-size:       var(--mnd-font-size-m);
+  font-weight:     var(--mnd-font-weight-semibold);
+  border:          none;
+  border-radius:   8px;
+  cursor:          pointer;
+  box-shadow:      0 1px 0 rgba(0,0,0,0.18);
+  transition:      opacity 0.1s;
+}
+.transferDone:active { opacity: 0.7; }
+
+/* ── Password keyboard ───────────────────────────────────── */
+
+.pwWrap {
+  display:        flex;
+  flex-direction: column;
+  gap:            6px;
+  width:          100%;
+}
+
+.pwRow {
+  display:         flex;
+  gap:             5px;
+  justify-content: center;
+}
+
+.pwKey {
+  flex:       1;
+  height:     44px;
+  min-width:  0;
+  font-size:  var(--mnd-font-size-m);
+}
+
+/* shift / delete keys are ~1.5× wide */
+.pwWide {
+  flex: 1.5;
+}
+
+/* mode switch (123/ABC) and Done */
+.pwMode {
+  flex:     1.4;
+  font-size: var(--mnd-font-size-s);
+}
+
+/* space bar */
+.pwSpace {
+  flex:        4;
+  height:      44px;
+  display:     flex;
+  align-items: center;
+  justify-content: center;
+  background:  #adb5bd;
+  border-radius: 8px;
+  border:      none;
+  cursor:      pointer;
+  font-family: var(--mnd-font-family-plain);
+  font-size:   var(--mnd-font-size-s);
+  color:       var(--mnd-color-text-primary);
+  box-shadow:  0 1px 0 rgba(0,0,0,0.18);
+  transition:  opacity 0.1s;
+}
+.pwSpace:active { opacity: 0.5; }
+
+/* shift active highlight */
+.pwShiftActive {
+  background: #8c9197;
+}
