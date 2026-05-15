@@ -47,7 +47,7 @@
 
 .sizeNormal .label {
   font-size:   var(--mnd-font-size-m);
-  line-height: var(--mnd-line-height-m);
+  line-height: var(--mnd-line-height-s);
 }
 
 .sizeSmall .label {
@@ -90,7 +90,7 @@
 
 .active .label {
   color:       var(--mnd-color-fg-shopee);
-  font-weight: var(--mnd-font-weight-semibold);
+  font-weight: var(--mnd-font-weight-medium);
 }
 
 /* ── Active indicator line ───────────────────────────────── */

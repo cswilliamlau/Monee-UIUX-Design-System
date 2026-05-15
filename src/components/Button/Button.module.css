@@ -10,7 +10,7 @@
   white-space: nowrap;
   cursor: pointer;
   font-family: var(--mnd-font-family-plain);
-  font-weight: var(--mnd-font-weight-semibold);
+  font-weight: var(--mnd-font-weight-medium);
   border: 1px solid transparent;
   border-radius: var(--mnd-radius-m);
   transition: background 0.15s, color 0.15s, border-color 0.15s, opacity 0.15s;
@@ -122,7 +122,7 @@
   height: var(--mnd-button-height-xl);
   padding: 0 var(--mnd-padding-3xl);
   font-size: var(--mnd-font-size-m);
-  font-weight: var(--mnd-font-weight-semibold);
+  font-weight: var(--mnd-font-weight-medium);
   font-family: var(--mnd-font-family-plain);
   border-radius: var(--mnd-radius-l);
   border: 1px solid transparent;

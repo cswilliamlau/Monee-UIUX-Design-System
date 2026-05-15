@@ -43,8 +43,8 @@
 .onboarding .title {
   font-family: var(--mnd-font-family-plain);
   font-size: var(--mnd-font-size-m);
-  font-weight: var(--mnd-font-weight-semibold);
-  line-height: var(--mnd-line-height-m);
+  font-weight: var(--mnd-font-weight-medium);
+  line-height: var(--mnd-line-height-s);
   color: var(--mnd-color-text-primary);
   margin-bottom: 4px;
 }
@@ -102,7 +102,7 @@
   color: var(--mnd-color-text-shopee);
   font-family: var(--mnd-font-family-plain);
   font-size: var(--mnd-font-size-xs);
-  font-weight: var(--mnd-font-weight-semibold);
+  font-weight: var(--mnd-font-weight-medium);
   cursor: pointer;
   white-space: nowrap;
 }
@@ -116,7 +116,7 @@
   color: #fff;
   font-family: var(--mnd-font-family-plain);
   font-size: var(--mnd-font-size-xs);
-  font-weight: var(--mnd-font-weight-semibold);
+  font-weight: var(--mnd-font-weight-medium);
   cursor: pointer;
   white-space: nowrap;
 }

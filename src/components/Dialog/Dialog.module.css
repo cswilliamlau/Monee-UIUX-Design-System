@@ -57,7 +57,7 @@
 .title {
   font-family: var(--mnd-font-family-plain);
   font-size: var(--mnd-font-size-l);
-  font-weight: var(--mnd-font-weight-semibold);
+  font-weight: var(--mnd-font-weight-medium);
   line-height: var(--mnd-line-height-l);
   color: var(--mnd-color-text-primary);
   display: -webkit-box;
@@ -70,7 +70,7 @@
 .content {
   font-family: var(--mnd-font-family-plain);
   font-size: var(--mnd-font-size-m);
-  line-height: var(--mnd-line-height-m);
+  line-height: var(--mnd-line-height-s);
   color: var(--mnd-color-text-secondary);
 }
 
@@ -99,7 +99,7 @@
   padding: 0 var(--mnd-padding-4xl);
   font-family: var(--mnd-font-family-plain);
   font-size: var(--mnd-font-size-m);
-  font-weight: var(--mnd-font-weight-semibold);
+  font-weight: var(--mnd-font-weight-medium);
   border-radius: var(--mnd-radius-l);
   border: 1px solid transparent;
   cursor: pointer;

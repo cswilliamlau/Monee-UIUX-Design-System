@@ -24,7 +24,7 @@
 
 /* not-yet — gray hollow ring */
 .circle_notyet {
-  border: 1.5px solid #c8c8c8;
+  border: 1.5px solid var(--mnd-color-fg-disable);
   background: transparent;
 }
 
@@ -58,7 +58,7 @@
 
 .vLine_done  { background: var(--mnd-color-fg-shopee); }
 .vLine_doing { background: var(--mnd-color-fg-shopee); }
-.vLine_notyet { background: #c8c8c8; }
+.vLine_notyet { background: var(--mnd-color-fg-disable); }
 
 /* content column */
 .vContent {
@@ -71,8 +71,8 @@
 .vTitle {
   font-family: var(--mnd-font-family-plain);
   font-size:   var(--mnd-font-size-m);
-  font-weight: var(--mnd-font-weight-semibold);
-  line-height: var(--mnd-line-height-m);
+  font-weight: var(--mnd-font-weight-medium);
+  line-height: var(--mnd-line-height-s);
 }
 
 .vTitle_done   { color: var(--mnd-color-text-primary); }
@@ -113,7 +113,7 @@
 
 .hDot_done   { border: 1.5px solid var(--mnd-color-fg-shopee); background: transparent; }
 .hDot_doing  { background: var(--mnd-color-fg-shopee); }
-.hDot_notyet { border: 1.5px solid #c8c8c8; background: transparent; }
+.hDot_notyet { border: 1.5px solid var(--mnd-color-fg-disable); background: transparent; }
 
 .hBar {
   flex:   1;
@@ -139,5 +139,5 @@
 }
 
 .hLabel_done   { color: var(--mnd-color-text-primary); }
-.hLabel_doing  { color: var(--mnd-color-fg-shopee); font-weight: var(--mnd-font-weight-semibold); }
+.hLabel_doing  { color: var(--mnd-color-fg-shopee); font-weight: var(--mnd-font-weight-medium); }
 .hLabel_notyet { color: var(--mnd-color-text-tertiary, #b0b0b0); }

@@ -414,6 +414,7 @@
      SYSTEM: BORDER RADIUS
   ---------------------------------------------------------- */
   --mnd-radius-none: 0px;
+  --mnd-radius-xs:   2px;
   --mnd-radius-s:    4px;
   --mnd-radius-m:    6px;
   --mnd-radius-l:    10px;

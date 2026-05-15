@@ -21,7 +21,7 @@
   border-radius:   8px;
   cursor:          pointer;
   font-family:     var(--mnd-font-family-plain);
-  font-size:       var(--mnd-font-size-xl, 20px);
+  font-size:       var(--mnd-font-size-2xl);
   font-weight:     var(--mnd-font-weight-medium);
   color:           var(--mnd-color-text-primary);
   transition:      opacity 0.1s;
@@ -49,7 +49,7 @@
   background:  var(--mnd-color-fg-shopee);
   color:       #ffffff;
   font-size:   var(--mnd-font-size-m);
-  font-weight: var(--mnd-font-weight-semibold);
+  font-weight: var(--mnd-font-weight-medium);
   box-shadow:  0 1px 0 rgba(0,0,0,0.18);
 }
 
@@ -66,8 +66,8 @@
   background:  rgba(0, 0, 0, 0.06);
   box-shadow:  none;
   border-radius: 50%;
-  font-size:   var(--mnd-font-size-2xl, 24px);
-  font-weight: var(--mnd-font-weight-regular, 400);
+  font-size:   var(--mnd-font-size-3xl);
+  font-weight: var(--mnd-font-weight-regular);
 }
 
 /* ── PIN / Login grid ────────────────────────────────────── */
@@ -110,7 +110,7 @@
 .transferDelete {
   grid-column: 4;
   grid-row:    1;
-  font-size:   16px;
+  font-size:   var(--mnd-font-size-l);
 }
 
 /* Done spans rows 2–4 in column 4 */
@@ -121,7 +121,7 @@
   color:           #ffffff;
   font-family:     var(--mnd-font-family-plain);
   font-size:       var(--mnd-font-size-m);
-  font-weight:     var(--mnd-font-weight-semibold);
+  font-weight:     var(--mnd-font-weight-medium);
   border:          none;
   border-radius:   8px;
   cursor:          pointer;

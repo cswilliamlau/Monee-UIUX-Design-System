@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   font-family: var(--mnd-font-family-plain);
-  font-weight: var(--mnd-font-weight-semibold);
+  font-weight: var(--mnd-font-weight-medium);
   line-height: 1;
   white-space: nowrap;
   flex-shrink: 0;

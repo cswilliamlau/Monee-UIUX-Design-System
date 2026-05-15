@@ -32,14 +32,14 @@
 
 /* error state */
 .state_error .inputRow {
-  background:          #fff5f5;
-  border-bottom-color: #e53935;
+  background:          var(--mnd-color-bg-error);
+  border-bottom-color: var(--mnd-color-fg-error);
 }
 
 /* warning state */
 .state_warning .inputRow {
-  background:          #fffbf0;
-  border-bottom-color: #f59e0b;
+  background:          var(--mnd-color-bg-warning);
+  border-bottom-color: var(--mnd-color-fg-warning);
 }
 
 /* disabled state */
@@ -119,8 +119,8 @@
 }
 
 .focused .floatingLabelUp { color: var(--mnd-color-fg-shopee); }
-.state_error   .floatingLabelUp { color: #e53935; }
-.state_warning .floatingLabelUp { color: #f59e0b; }
+.state_error   .floatingLabelUp { color: var(--mnd-color-text-error); }
+.state_warning .floatingLabelUp { color: var(--mnd-color-text-warning); }
 
 /* ── Helper / hint text ──────────────────────────────────── */
 
@@ -135,5 +135,5 @@
 }
 
 .helperHint    { color: var(--mnd-color-text-tertiary, #b0b0b0); }
-.helperError   { color: #e53935; }
-.helperWarning { color: #f59e0b; }
+.helperError   { color: var(--mnd-color-text-error); }
+.helperWarning { color: var(--mnd-color-text-warning); }

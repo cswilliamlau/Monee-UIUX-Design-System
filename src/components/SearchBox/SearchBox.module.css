@@ -68,7 +68,7 @@
   background:  transparent;
   font-family: var(--mnd-font-family-plain);
   font-size:   var(--mnd-font-size-m);
-  line-height: var(--mnd-line-height-m);
+  line-height: var(--mnd-line-height-s);
   color:       var(--mnd-color-text-primary);
   caret-color: var(--mnd-color-fg-shopee);
 }
