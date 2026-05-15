@@ -76,6 +76,7 @@
   --mnd-dim-19:   76px;
   --mnd-dim-20:   80px;
   --mnd-dim-26:   104px;
+  --mnd-dim-75:   300px;
 
   /* ----------------------------------------------------------
      REFERENCE: PALETTE — Base
@@ -394,8 +395,6 @@
   --mnd-gap-xl:   8px;
   --mnd-gap-2xl:  12px;
   --mnd-gap-3xl:  16px;
-  --mnd-gap-4xl:  20px;
-  --mnd-gap-5xl:  24px;
 
   /* ----------------------------------------------------------
      SYSTEM: SPACING — Padding
@@ -414,12 +413,18 @@
      SYSTEM: BORDER RADIUS
   ---------------------------------------------------------- */
   --mnd-radius-none: 0px;
-  --mnd-radius-xs:   2px;
   --mnd-radius-s:    4px;
   --mnd-radius-m:    6px;
   --mnd-radius-l:    10px;
   --mnd-radius-xl:   12px;
-  --mnd-radius-full: 999px;
+  --mnd-radius-full: 9999px;
+
+  /* ----------------------------------------------------------
+     SYSTEM: ELEVATION (Box Shadow)
+  ---------------------------------------------------------- */
+  --mnd-shadow-6:  0 0 6px  rgba(0, 0, 0, 0.06);
+  --mnd-shadow-9:  0 0 9px  rgba(0, 0, 0, 0.12);
+  --mnd-shadow-20: 0 0 20px rgba(0, 0, 0, 0.06);
 
   /* ----------------------------------------------------------
      SYSTEM: CONTROL HEIGHT

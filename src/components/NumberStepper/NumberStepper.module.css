@@ -16,7 +16,7 @@
   align-items:     center;
   justify-content: center;
   background:      transparent;
-  border-radius:   var(--mnd-radius-xs);
+  border-radius:   var(--mnd-radius-s);
   cursor:          pointer;
   flex-shrink:     0;
   transition:      border-color 0.15s, color 0.15s, opacity 0.15s;
